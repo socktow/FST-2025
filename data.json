@@ -1,0 +1,2739 @@
+{
+    "type": "ingame-state-update",
+    "state": {
+      "gameTime": 65,
+      "patch": null,
+      "gameVersion": null,
+      "gameStatus": "gameRunning",
+      "scoreboard": {
+        "teams": [
+          {
+            "teamName": "",
+            "teamTag": "",
+            "teamIconUrl": "",
+            "seriesScore": {
+              "wins": 2,
+              "losses": 1
+            },
+            "totalScore": {
+              "wins": 5,
+              "losses": 3
+            },
+            "infoText": "LEC #1",
+            "gold": 18324,
+            "kills": 12,
+            "towers": 1,
+            "grubs": 3,
+            "dragons": [
+              "air",
+              "earth"
+            ],
+            "atakhan": null,
+            "baronPowerPlay": {
+              "gold": 1500,
+              "kills": 2,
+              "deaths": 0,
+              "timeLeft": 115,
+              "timeTotal": 180
+            },
+            "dragonPowerPlay": null,
+            "featsOfStrength": {
+              "hasFeatsOfStrength": false,
+              "turrets": 0,
+              "turretsWasFirst": false,
+              "kills": 0,
+              "killsWasFirst": false,
+              "objectives": 0,
+              "objectivesWasFirst": false
+            }
+          },
+          {
+            "teamName": "",
+            "teamTag": "",
+            "teamIconUrl": "",
+            "seriesScore": {
+              "wins": 1,
+              "losses": 2
+            },
+            "totalScore": {
+              "wins": 3,
+              "losses": 5
+            },
+            "infoText": "LEC #2",
+            "gold": 16393,
+            "kills": 7,
+            "towers": 0,
+            "grubs": 3,
+            "dragons": [
+              "hextech",
+              "hextech",
+              "hextech"
+            ],
+            "atakhan": null,
+            "baronPowerPlay": null,
+            "dragonPowerPlay": null,
+            "featsOfStrength": {
+              "hasFeatsOfStrength": false,
+              "turrets": 0,
+              "turretsWasFirst": false,
+              "kills": 0,
+              "killsWasFirst": false,
+              "objectives": 0,
+              "objectivesWasFirst": false
+            }
+          }
+        ],
+        "gameTime": 65,
+        "bestOf": 3
+      },
+      "tabs": [
+        {
+          "id": 4294967293,
+          "players": [
+            {
+              "id": "00000000-0000-0000-0000-000000000000",
+              "playerName": "Player 0",
+              "playerHashtag": "EUW",
+              "championAssets": {
+                "id": 60,
+                "alias": "Elise",
+                "name": "Elise",
+                "splashCenteredImg": "cache/game/15.5/champion/Elise/splashCentered.jpg",
+                "splashImg": "cache/game/15.5/champion/Elise/splash.jpg",
+                "loadingImg": "cache/game/15.5/champion/Elise/loading.png",
+                "squareImg": "cache/game/15.5/champion/Elise/square.png"
+              },
+              "abilities": [
+                {
+                  "identifier": "EliseR",
+                  "displayName": "EliseR",
+                  "slot": "Q",
+                  "totalCooldown": 35,
+                  "cooldown": 53,
+                  "level": 2,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "EliseR",
+                    "iconAsset": "cache/game/15.5/champion/Elise/abilities/eliser.png",
+                    "iconName": "eliser.png"
+                  }
+                },
+                {
+                  "identifier": "EliseRSpider",
+                  "displayName": "EliseRSpider",
+                  "slot": "W",
+                  "totalCooldown": 2,
+                  "cooldown": 32,
+                  "level": 5,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "EliseRSpider",
+                    "iconAsset": "cache/game/15.5/champion/Elise/abilities/eliser.png",
+                    "iconName": "eliser.png"
+                  }
+                },
+                {
+                  "identifier": "EliseRDummy",
+                  "displayName": "EliseRDummy",
+                  "slot": "E",
+                  "totalCooldown": 68,
+                  "cooldown": 18,
+                  "level": 1,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "EliseRDummy",
+                    "iconAsset": "cache/game/15.5/champion/Elise/abilities/eliser.png",
+                    "iconName": "eliser.png"
+                  }
+                },
+                {
+                  "identifier": "EliseHumanQ",
+                  "displayName": "EliseHumanQ",
+                  "slot": "R",
+                  "totalCooldown": 46,
+                  "cooldown": 0,
+                  "level": 3,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "EliseHumanQ",
+                    "iconAsset": "cache/game/15.5/champion/Elise/abilities/elisehumanq.png",
+                    "iconName": "elisehumanq.png"
+                  }
+                },
+                {
+                  "identifier": "39",
+                  "displayName": "39",
+                  "slot": "D",
+                  "totalCooldown": 43,
+                  "cooldown": 0,
+                  "level": 3,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "39",
+                    "iconAsset": "cache/game/15.5/summoner/39.png",
+                    "iconName": "39.png"
+                  }
+                },
+                {
+                  "identifier": "wavestar_playerbuff_statsmodifier",
+                  "displayName": "wavestar_playerbuff_statsmodifier",
+                  "slot": "D",
+                  "totalCooldown": 41,
+                  "cooldown": 25,
+                  "level": 2,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "wavestar_playerbuff_statsmodifier",
+                    "iconAsset": "cache/game/15.5/summoner/wavestar_playerbuff_statsmodifier.png",
+                    "iconName": "wavestar_playerbuff_statsmodifier.png"
+                  }
+                }
+              ],
+              "perks": [
+                {
+                  "id": 8010,
+                  "name": "Conqueror",
+                  "iconPath": "cache/game/15.5/perk/8010.png"
+                },
+                {
+                  "id": 9101,
+                  "name": "Absorb Life",
+                  "iconPath": "cache/game/15.5/perk/9101.png"
+                }
+              ],
+              "health": {
+                "current": 1362,
+                "max": 3000,
+                "shield": 0,
+                "physicalShield": 0,
+                "magicalShield": 0
+              },
+              "resource": {
+                "type": "Mana",
+                "current": 57,
+                "max": 3000
+              },
+              "stacksData": 964,
+              "hasBaron": false,
+              "hasElder": false,
+              "level": 7,
+              "experience": {
+                "previousLevel": 0,
+                "current": 32,
+                "nextLevel": 100
+              }
+            },
+            {
+              "id": "00000000-0000-0000-0000-000000000000",
+              "playerName": "Player 1",
+              "playerHashtag": "EUW",
+              "championAssets": {
+                "id": 83,
+                "alias": "Yorick",
+                "name": "Yorick",
+                "splashCenteredImg": "cache/game/15.5/champion/Yorick/splashCentered.jpg",
+                "splashImg": "cache/game/15.5/champion/Yorick/splash.jpg",
+                "loadingImg": "cache/game/15.5/champion/Yorick/loading.png",
+                "squareImg": "cache/game/15.5/champion/Yorick/square.png"
+              },
+              "abilities": [
+                {
+                  "identifier": "YorickR",
+                  "displayName": "YorickR",
+                  "slot": "Q",
+                  "totalCooldown": 17,
+                  "cooldown": 2,
+                  "level": 3,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "YorickR",
+                    "iconAsset": "cache/game/15.5/champion/Yorick/abilities/yorick_r.png",
+                    "iconName": "yorick_r.png"
+                  }
+                },
+                {
+                  "identifier": "YorickR2",
+                  "displayName": "YorickR2",
+                  "slot": "W",
+                  "totalCooldown": 4,
+                  "cooldown": 8,
+                  "level": 4,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "YorickR2",
+                    "iconAsset": "cache/game/15.5/champion/Yorick/abilities/yorick_r2.png",
+                    "iconName": "yorick_r2.png"
+                  }
+                },
+                {
+                  "identifier": "YorickQ",
+                  "displayName": "YorickQ",
+                  "slot": "E",
+                  "totalCooldown": 85,
+                  "cooldown": 59,
+                  "level": 4,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "YorickQ",
+                    "iconAsset": "cache/game/15.5/champion/Yorick/abilities/yorick_q.png",
+                    "iconName": "yorick_q.png"
+                  }
+                },
+                {
+                  "identifier": "YorickQ2",
+                  "displayName": "YorickQ2",
+                  "slot": "R",
+                  "totalCooldown": 53,
+                  "cooldown": 0,
+                  "level": 5,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "YorickQ2",
+                    "iconAsset": "cache/game/15.5/champion/Yorick/abilities/yorick_q2.png",
+                    "iconName": "yorick_q2.png"
+                  }
+                },
+                {
+                  "identifier": "034_steel_shield",
+                  "displayName": "034_steel_shield",
+                  "slot": "D",
+                  "totalCooldown": 23,
+                  "cooldown": 0,
+                  "level": 5,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "034_steel_shield",
+                    "iconAsset": "cache/game/15.5/summoner/034_steel_shield.png",
+                    "iconName": "034_steel_shield.png"
+                  }
+                },
+                {
+                  "identifier": "gw_debuff",
+                  "displayName": "gw_debuff",
+                  "slot": "D",
+                  "totalCooldown": 46,
+                  "cooldown": 0,
+                  "level": 3,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "gw_debuff",
+                    "iconAsset": "cache/game/15.5/summoner/gw_debuff.png",
+                    "iconName": "gw_debuff.png"
+                  }
+                }
+              ],
+              "perks": [
+                {
+                  "id": 8345,
+                  "name": "Biscuit Delivery",
+                  "iconPath": "cache/game/15.5/perk/8345.png"
+                },
+                {
+                  "id": 8360,
+                  "name": "Unsealed Spellbook",
+                  "iconPath": "cache/game/15.5/perk/8360.png"
+                }
+              ],
+              "health": {
+                "current": 724,
+                "max": 3000,
+                "shield": 0,
+                "physicalShield": 0,
+                "magicalShield": 0
+              },
+              "resource": {
+                "type": "Mana",
+                "current": 1772,
+                "max": 3000
+              },
+              "stacksData": null,
+              "hasBaron": false,
+              "hasElder": false,
+              "level": 17,
+              "experience": {
+                "previousLevel": 0,
+                "current": 44,
+                "nextLevel": 100
+              }
+            },
+            {
+              "id": "00000000-0000-0000-0000-000000000000",
+              "playerName": "Player 2",
+              "playerHashtag": "EUW",
+              "championAssets": {
+                "id": 126,
+                "alias": "Jayce",
+                "name": "Jayce",
+                "splashCenteredImg": "cache/game/15.5/champion/Jayce/splashCentered.jpg",
+                "splashImg": "cache/game/15.5/champion/Jayce/splash.jpg",
+                "loadingImg": "cache/game/15.5/champion/Jayce/loading.png",
+                "squareImg": "cache/game/15.5/champion/Jayce/square.png"
+              },
+              "abilities": [
+                {
+                  "identifier": "JayceStanceHtG",
+                  "displayName": "JayceStanceHtG",
+                  "slot": "Q",
+                  "totalCooldown": 85,
+                  "cooldown": 55,
+                  "level": 1,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "JayceStanceHtG",
+                    "iconAsset": "cache/game/15.5/champion/Jayce/abilities/jaycer_ranged.png",
+                    "iconName": "jaycer_ranged.png"
+                  }
+                },
+                {
+                  "identifier": "JayceStanceGtH",
+                  "displayName": "JayceStanceGtH",
+                  "slot": "W",
+                  "totalCooldown": 89,
+                  "cooldown": 10,
+                  "level": 4,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "JayceStanceGtH",
+                    "iconAsset": "cache/game/15.5/champion/Jayce/abilities/jaycer_melee.png",
+                    "iconName": "jaycer_melee.png"
+                  }
+                },
+                {
+                  "identifier": "JayceToTheSkies",
+                  "displayName": "JayceToTheSkies",
+                  "slot": "E",
+                  "totalCooldown": 51,
+                  "cooldown": 32,
+                  "level": 4,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "JayceToTheSkies",
+                    "iconAsset": "cache/game/15.5/champion/Jayce/abilities/jayceq_melee.png",
+                    "iconName": "jayceq_melee.png"
+                  }
+                },
+                {
+                  "identifier": "JayceStaticField",
+                  "displayName": "JayceStaticField",
+                  "slot": "R",
+                  "totalCooldown": 93,
+                  "cooldown": 25,
+                  "level": 1,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "JayceStaticField",
+                    "iconAsset": "cache/game/15.5/champion/Jayce/abilities/jaycew_melee.png",
+                    "iconName": "jaycew_melee.png"
+                  }
+                },
+                {
+                  "identifier": "smite_silver",
+                  "displayName": "smite_silver",
+                  "slot": "D",
+                  "totalCooldown": 89,
+                  "cooldown": 43,
+                  "level": 4,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "smite_silver",
+                    "iconAsset": "cache/game/15.5/summoner/smite_silver.png",
+                    "iconName": "smite_silver.png"
+                  }
+                },
+                {
+                  "identifier": "6361",
+                  "displayName": "6361",
+                  "slot": "D",
+                  "totalCooldown": 89,
+                  "cooldown": 26,
+                  "level": 2,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "6361",
+                    "iconAsset": "cache/game/15.5/summoner/6361.png",
+                    "iconName": "6361.png"
+                  }
+                }
+              ],
+              "perks": [
+                {
+                  "id": 8021,
+                  "name": "Fleet Footwork",
+                  "iconPath": "cache/game/15.5/perk/8021.png"
+                },
+                {
+                  "id": 8313,
+                  "name": "Triple Tonic",
+                  "iconPath": "cache/game/15.5/perk/8313.png"
+                }
+              ],
+              "health": {
+                "current": 832,
+                "max": 3000,
+                "shield": 0,
+                "physicalShield": 0,
+                "magicalShield": 0
+              },
+              "resource": {
+                "type": "Mana",
+                "current": 2192,
+                "max": 3000
+              },
+              "stacksData": 957,
+              "hasBaron": false,
+              "hasElder": false,
+              "level": 4,
+              "experience": {
+                "previousLevel": 0,
+                "current": 56,
+                "nextLevel": 100
+              }
+            },
+            {
+              "id": "00000000-0000-0000-0000-000000000000",
+              "playerName": "Player 3",
+              "playerHashtag": "EUW",
+              "championAssets": {
+                "id": 84,
+                "alias": "Akali",
+                "name": "Akali",
+                "splashCenteredImg": "cache/game/15.5/champion/Akali/splashCentered.jpg",
+                "splashImg": "cache/game/15.5/champion/Akali/splash.jpg",
+                "loadingImg": "cache/game/15.5/champion/Akali/loading.png",
+                "squareImg": "cache/game/15.5/champion/Akali/square.png"
+              },
+              "abilities": [
+                {
+                  "identifier": "AkaliRb",
+                  "displayName": "AkaliRb",
+                  "slot": "Q",
+                  "totalCooldown": 89,
+                  "cooldown": 0,
+                  "level": 1,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "AkaliRb",
+                    "iconAsset": "cache/game/15.5/champion/Akali/abilities/akali_r2.png",
+                    "iconName": "akali_r2.png"
+                  }
+                },
+                {
+                  "identifier": "AkaliR",
+                  "displayName": "AkaliR",
+                  "slot": "W",
+                  "totalCooldown": 79,
+                  "cooldown": 14,
+                  "level": 4,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "AkaliR",
+                    "iconAsset": "cache/game/15.5/champion/Akali/abilities/akali_r.png",
+                    "iconName": "akali_r.png"
+                  }
+                },
+                {
+                  "identifier": "AkaliQ",
+                  "displayName": "AkaliQ",
+                  "slot": "E",
+                  "totalCooldown": 27,
+                  "cooldown": 0,
+                  "level": 1,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "AkaliQ",
+                    "iconAsset": "cache/game/15.5/champion/Akali/abilities/akali_q.png",
+                    "iconName": "akali_q.png"
+                  }
+                },
+                {
+                  "identifier": "AkaliW",
+                  "displayName": "AkaliW",
+                  "slot": "R",
+                  "totalCooldown": 83,
+                  "cooldown": 86,
+                  "level": 2,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "AkaliW",
+                    "iconAsset": "cache/game/15.5/champion/Akali/abilities/akali_w.png",
+                    "iconName": "akali_w.png"
+                  }
+                },
+                {
+                  "identifier": "ultbook_rengar_square_0",
+                  "displayName": "ultbook_rengar_square_0",
+                  "slot": "D",
+                  "totalCooldown": 72,
+                  "cooldown": 96,
+                  "level": 1,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "ultbook_rengar_square_0",
+                    "iconAsset": "cache/game/15.5/summoner/ultbook_rengar_square_0.png",
+                    "iconName": "ultbook_rengar_square_0.png"
+                  }
+                },
+                {
+                  "identifier": "3042_muramana",
+                  "displayName": "3042_muramana",
+                  "slot": "D",
+                  "totalCooldown": 82,
+                  "cooldown": 0,
+                  "level": 4,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "3042_muramana",
+                    "iconAsset": "cache/game/15.5/summoner/3042_muramana.png",
+                    "iconName": "3042_muramana.png"
+                  }
+                }
+              ],
+              "perks": [
+                {
+                  "id": 8114,
+                  "name": "The Immortal Butcher",
+                  "iconPath": "cache/game/15.5/perk/8114.png"
+                },
+                {
+                  "id": 8008,
+                  "name": "Lethal Tempo",
+                  "iconPath": "cache/game/15.5/perk/8008.png"
+                }
+              ],
+              "health": {
+                "current": 1777,
+                "max": 3000,
+                "shield": 0,
+                "physicalShield": 0,
+                "magicalShield": 0
+              },
+              "resource": {
+                "type": "Mana",
+                "current": 2894,
+                "max": 3000
+              },
+              "stacksData": 398,
+              "hasBaron": false,
+              "hasElder": false,
+              "level": 13,
+              "experience": {
+                "previousLevel": 0,
+                "current": 35,
+                "nextLevel": 100
+              }
+            },
+            {
+              "id": "00000000-0000-0000-0000-000000000000",
+              "playerName": "Player 4",
+              "playerHashtag": "EUW",
+              "championAssets": {
+                "id": 427,
+                "alias": "Ivern",
+                "name": "Ivern",
+                "splashCenteredImg": "cache/game/15.5/champion/Ivern/splashCentered.jpg",
+                "splashImg": "cache/game/15.5/champion/Ivern/splash.jpg",
+                "loadingImg": "cache/game/15.5/champion/Ivern/loading.png",
+                "squareImg": "cache/game/15.5/champion/Ivern/square.png"
+              },
+              "abilities": [
+                {
+                  "identifier": "IvernR",
+                  "displayName": "IvernR",
+                  "slot": "Q",
+                  "totalCooldown": 56,
+                  "cooldown": 30,
+                  "level": 4,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "IvernR",
+                    "iconAsset": "cache/game/15.5/champion/Ivern/abilities/ivernr.png",
+                    "iconName": "ivernr.png"
+                  }
+                },
+                {
+                  "identifier": "IvernRRecast",
+                  "displayName": "IvernRRecast",
+                  "slot": "W",
+                  "totalCooldown": 9,
+                  "cooldown": 41,
+                  "level": 4,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "IvernRRecast",
+                    "iconAsset": "cache/game/15.5/champion/Ivern/abilities/ivernr2.png",
+                    "iconName": "ivernr2.png"
+                  }
+                },
+                {
+                  "identifier": "IvernRChargeGolem",
+                  "displayName": "IvernRChargeGolem",
+                  "slot": "E",
+                  "totalCooldown": 18,
+                  "cooldown": 0,
+                  "level": 1,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "IvernRChargeGolem",
+                    "iconAsset": "cache/game/15.5/champion/Ivern/abilities/ivernr.png",
+                    "iconName": "ivernr.png"
+                  }
+                },
+                {
+                  "identifier": "IvernRMissile",
+                  "displayName": "IvernRMissile",
+                  "slot": "R",
+                  "totalCooldown": 2,
+                  "cooldown": 38,
+                  "level": 5,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "IvernRMissile",
+                    "iconAsset": "cache/game/15.5/champion/Ivern/abilities/ivernr2.png",
+                    "iconName": "ivernr2.png"
+                  }
+                },
+                {
+                  "identifier": "evelynn_outofstealth",
+                  "displayName": "evelynn_outofstealth",
+                  "slot": "D",
+                  "totalCooldown": 29,
+                  "cooldown": 0,
+                  "level": 5,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "evelynn_outofstealth",
+                    "iconAsset": "cache/game/15.5/summoner/evelynn_outofstealth.png",
+                    "iconName": "evelynn_outofstealth.png"
+                  }
+                },
+                {
+                  "identifier": "doombotscursekarthus",
+                  "displayName": "doombotscursekarthus",
+                  "slot": "D",
+                  "totalCooldown": 33,
+                  "cooldown": 0,
+                  "level": 4,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "doombotscursekarthus",
+                    "iconAsset": "cache/game/15.5/summoner/doombotscursekarthus.png",
+                    "iconName": "doombotscursekarthus.png"
+                  }
+                }
+              ],
+              "perks": [
+                {
+                  "id": 8135,
+                  "name": "Treasure Hunter",
+                  "iconPath": "cache/game/15.5/perk/8135.png"
+                },
+                {
+                  "id": 8127,
+                  "name": "The Twisted Surgeon",
+                  "iconPath": "cache/game/15.5/perk/8127.png"
+                }
+              ],
+              "health": {
+                "current": 161,
+                "max": 3000,
+                "shield": 0,
+                "physicalShield": 0,
+                "magicalShield": 0
+              },
+              "resource": {
+                "type": "Mana",
+                "current": 58,
+                "max": 3000
+              },
+              "stacksData": null,
+              "hasBaron": false,
+              "hasElder": false,
+              "level": 7,
+              "experience": {
+                "previousLevel": 0,
+                "current": 18,
+                "nextLevel": 100
+              }
+            }
+          ]
+        },
+        {
+          "id": 4294967294,
+          "players": [
+            {
+              "id": "00000000-0000-0000-0000-000000000000",
+              "playerName": "Player 5",
+              "playerHashtag": "EUW",
+              "championAssets": {
+                "id": 22,
+                "alias": "Ashe",
+                "name": "Ashe",
+                "splashCenteredImg": "cache/game/15.5/champion/Ashe/splashCentered.jpg",
+                "splashImg": "cache/game/15.5/champion/Ashe/splash.jpg",
+                "loadingImg": "cache/game/15.5/champion/Ashe/loading.png",
+                "squareImg": "cache/game/15.5/champion/Ashe/square.png"
+              },
+              "abilities": [
+                {
+                  "identifier": "AsheQ",
+                  "displayName": "AsheQ",
+                  "slot": "Q",
+                  "totalCooldown": 67,
+                  "cooldown": 0,
+                  "level": 2,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "AsheQ",
+                    "iconAsset": "cache/game/15.5/champion/Ashe/abilities/ashe_q.png",
+                    "iconName": "ashe_q.png"
+                  }
+                },
+                {
+                  "identifier": "AsheQAttack",
+                  "displayName": "AsheQAttack",
+                  "slot": "W",
+                  "totalCooldown": 21,
+                  "cooldown": 0,
+                  "level": 2,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "AsheQAttack",
+                    "iconAsset": "cache/game/15.5/champion/Ashe/abilities/ashe_q_active.png",
+                    "iconName": "ashe_q_active.png"
+                  }
+                },
+                {
+                  "identifier": "AsheQAttackNoOnHit",
+                  "displayName": "AsheQAttackNoOnHit",
+                  "slot": "E",
+                  "totalCooldown": 89,
+                  "cooldown": 31,
+                  "level": 2,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "AsheQAttackNoOnHit",
+                    "iconAsset": "cache/game/15.5/champion/Ashe/abilities/ashe_q_active.png",
+                    "iconName": "ashe_q_active.png"
+                  }
+                },
+                {
+                  "identifier": "Volley",
+                  "displayName": "Volley",
+                  "slot": "R",
+                  "totalCooldown": 77,
+                  "cooldown": 8,
+                  "level": 4,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "Volley",
+                    "iconAsset": "cache/game/15.5/champion/Ashe/abilities/ashe_w.png",
+                    "iconName": "ashe_w.png"
+                  }
+                },
+                {
+                  "identifier": "ultbook_seraphine_square",
+                  "displayName": "ultbook_seraphine_square",
+                  "slot": "D",
+                  "totalCooldown": 57,
+                  "cooldown": 44,
+                  "level": 3,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "ultbook_seraphine_square",
+                    "iconAsset": "cache/game/15.5/summoner/ultbook_seraphine_square.ellipsismage.png",
+                    "iconName": "ultbook_seraphine_square.ellipsismage.png"
+                  }
+                },
+                {
+                  "identifier": "ultbook_cassiopeia_square_0",
+                  "displayName": "ultbook_cassiopeia_square_0",
+                  "slot": "D",
+                  "totalCooldown": 34,
+                  "cooldown": 17,
+                  "level": 5,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "ultbook_cassiopeia_square_0",
+                    "iconAsset": "cache/game/15.5/summoner/ultbook_cassiopeia_square_0.png",
+                    "iconName": "ultbook_cassiopeia_square_0.png"
+                  }
+                }
+              ],
+              "perks": [
+                {
+                  "id": 8437,
+                  "name": "Grasp of the Undying",
+                  "iconPath": "cache/game/15.5/perk/8437.png"
+                },
+                {
+                  "id": 8444,
+                  "name": "Second Wind",
+                  "iconPath": "cache/game/15.5/perk/8444.png"
+                }
+              ],
+              "health": {
+                "current": 68,
+                "max": 3000,
+                "shield": 0,
+                "physicalShield": 0,
+                "magicalShield": 0
+              },
+              "resource": {
+                "type": "Mana",
+                "current": 2376,
+                "max": 3000
+              },
+              "stacksData": null,
+              "hasBaron": false,
+              "hasElder": false,
+              "level": 3,
+              "experience": {
+                "previousLevel": 0,
+                "current": 51,
+                "nextLevel": 100
+              }
+            },
+            {
+              "id": "00000000-0000-0000-0000-000000000000",
+              "playerName": "Player 6",
+              "playerHashtag": "EUW",
+              "championAssets": {
+                "id": 96,
+                "alias": "KogMaw",
+                "name": "Kog'Maw",
+                "splashCenteredImg": "cache/game/15.5/champion/KogMaw/splashCentered.jpg",
+                "splashImg": "cache/game/15.5/champion/KogMaw/splash.jpg",
+                "loadingImg": "cache/game/15.5/champion/KogMaw/loading.png",
+                "squareImg": "cache/game/15.5/champion/KogMaw/square.png"
+              },
+              "abilities": [
+                {
+                  "identifier": "KogMawQ",
+                  "displayName": "KogMawQ",
+                  "slot": "Q",
+                  "totalCooldown": 43,
+                  "cooldown": 19,
+                  "level": 5,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "KogMawQ",
+                    "iconAsset": "cache/game/15.5/champion/KogMaw/abilities/kogmaw_causticspittle.png",
+                    "iconName": "kogmaw_causticspittle.png"
+                  }
+                },
+                {
+                  "identifier": "KogMawQMis",
+                  "displayName": "KogMawQMis",
+                  "slot": "W",
+                  "totalCooldown": 83,
+                  "cooldown": 0,
+                  "level": 3,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "KogMawQMis",
+                    "iconAsset": "cache/game/15.5/champion/KogMaw/abilities/fallenangel_darkbinding.png",
+                    "iconName": "fallenangel_darkbinding.png"
+                  }
+                },
+                {
+                  "identifier": "KogMawCausticSpittle",
+                  "displayName": "KogMawCausticSpittle",
+                  "slot": "E",
+                  "totalCooldown": 66,
+                  "cooldown": 75,
+                  "level": 3,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "KogMawCausticSpittle",
+                    "iconAsset": "cache/game/15.5/champion/KogMaw/abilities/kogmaw_causticspittle.png",
+                    "iconName": "kogmaw_causticspittle.png"
+                  }
+                },
+                {
+                  "identifier": "KogMawBioArcaneBarrage",
+                  "displayName": "KogMawBioArcaneBarrage",
+                  "slot": "R",
+                  "totalCooldown": 65,
+                  "cooldown": 23,
+                  "level": 5,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "KogMawBioArcaneBarrage",
+                    "iconAsset": "cache/game/15.5/champion/KogMaw/abilities/kogmaw_bioarcanebarrage.png",
+                    "iconName": "kogmaw_bioarcanebarrage.png"
+                  }
+                },
+                {
+                  "identifier": "ultbook_renata_square",
+                  "displayName": "ultbook_renata_square",
+                  "slot": "D",
+                  "totalCooldown": 5,
+                  "cooldown": 0,
+                  "level": 1,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "ultbook_renata_square",
+                    "iconAsset": "cache/game/15.5/summoner/ultbook_renata_square.png",
+                    "iconName": "ultbook_renata_square.png"
+                  }
+                },
+                {
+                  "identifier": "ultbook_aurora_square",
+                  "displayName": "ultbook_aurora_square",
+                  "slot": "D",
+                  "totalCooldown": 47,
+                  "cooldown": 91,
+                  "level": 3,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "ultbook_aurora_square",
+                    "iconAsset": "cache/game/15.5/summoner/ultbook_aurora_square.png",
+                    "iconName": "ultbook_aurora_square.png"
+                  }
+                }
+              ],
+              "perks": [
+                {
+                  "id": 8205,
+                  "name": "The Incontestable Spellslinger",
+                  "iconPath": "cache/game/15.5/perk/8205.png"
+                },
+                {
+                  "id": 8232,
+                  "name": "Waterwalking",
+                  "iconPath": "cache/game/15.5/perk/8232.png"
+                }
+              ],
+              "health": {
+                "current": 50,
+                "max": 3000,
+                "shield": 0,
+                "physicalShield": 0,
+                "magicalShield": 0
+              },
+              "resource": {
+                "type": "Mana",
+                "current": 2646,
+                "max": 3000
+              },
+              "stacksData": null,
+              "hasBaron": false,
+              "hasElder": false,
+              "level": 3,
+              "experience": {
+                "previousLevel": 0,
+                "current": 80,
+                "nextLevel": 100
+              }
+            },
+            {
+              "id": "00000000-0000-0000-0000-000000000000",
+              "playerName": "Player 7",
+              "playerHashtag": "EUW",
+              "championAssets": {
+                "id": 99,
+                "alias": "Lux",
+                "name": "Lux",
+                "splashCenteredImg": "cache/game/15.5/champion/Lux/splashCentered.jpg",
+                "splashImg": "cache/game/15.5/champion/Lux/splash.jpg",
+                "loadingImg": "cache/game/15.5/champion/Lux/loading.png",
+                "squareImg": "cache/game/15.5/champion/Lux/square.png"
+              },
+              "abilities": [
+                {
+                  "identifier": "LuxR",
+                  "displayName": "LuxR",
+                  "slot": "Q",
+                  "totalCooldown": 33,
+                  "cooldown": 0,
+                  "level": 1,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "LuxR",
+                    "iconAsset": "cache/game/15.5/champion/Lux/abilities/luxfinalefunkeln.png",
+                    "iconName": "luxfinalefunkeln.png"
+                  }
+                },
+                {
+                  "identifier": "LuxLightBinding",
+                  "displayName": "LuxLightBinding",
+                  "slot": "W",
+                  "totalCooldown": 7,
+                  "cooldown": 41,
+                  "level": 3,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "LuxLightBinding",
+                    "iconAsset": "cache/game/15.5/champion/Lux/abilities/luxcrashingblitz2.png",
+                    "iconName": "luxcrashingblitz2.png"
+                  }
+                },
+                {
+                  "identifier": "LuxPrismaticWave",
+                  "displayName": "LuxPrismaticWave",
+                  "slot": "E",
+                  "totalCooldown": 10,
+                  "cooldown": 0,
+                  "level": 3,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "LuxPrismaticWave",
+                    "iconAsset": "cache/game/15.5/champion/Lux/abilities/luxprismawrap.png",
+                    "iconName": "luxprismawrap.png"
+                  }
+                },
+                {
+                  "identifier": "LuxLightStrikeKugel",
+                  "displayName": "LuxLightStrikeKugel",
+                  "slot": "R",
+                  "totalCooldown": 40,
+                  "cooldown": 0,
+                  "level": 2,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "LuxLightStrikeKugel",
+                    "iconAsset": "cache/game/15.5/champion/Lux/abilities/luxlightstrikekugel.png",
+                    "iconName": "luxlightstrikekugel.png"
+                  }
+                },
+                {
+                  "identifier": "dragonbuff_final",
+                  "displayName": "dragonbuff_final",
+                  "slot": "D",
+                  "totalCooldown": 58,
+                  "cooldown": 23,
+                  "level": 1,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "dragonbuff_final",
+                    "iconAsset": "cache/game/15.5/summoner/dragonbuff_final.png",
+                    "iconName": "dragonbuff_final.png"
+                  }
+                },
+                {
+                  "identifier": "cardmaster_red",
+                  "displayName": "cardmaster_red",
+                  "slot": "D",
+                  "totalCooldown": 29,
+                  "cooldown": 0,
+                  "level": 5,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "cardmaster_red",
+                    "iconAsset": "cache/game/15.5/summoner/cardmaster_red.png",
+                    "iconName": "cardmaster_red.png"
+                  }
+                }
+              ],
+              "perks": [
+                {
+                  "id": 5005,
+                  "name": "Attack Speed",
+                  "iconPath": "cache/game/15.5/perk/5005.png"
+                },
+                {
+                  "id": 8205,
+                  "name": "The Incontestable Spellslinger",
+                  "iconPath": "cache/game/15.5/perk/8205.png"
+                }
+              ],
+              "health": {
+                "current": 574,
+                "max": 3000,
+                "shield": 0,
+                "physicalShield": 0,
+                "magicalShield": 0
+              },
+              "resource": {
+                "type": "Mana",
+                "current": 1094,
+                "max": 3000
+              },
+              "stacksData": null,
+              "hasBaron": false,
+              "hasElder": false,
+              "level": 3,
+              "experience": {
+                "previousLevel": 0,
+                "current": 23,
+                "nextLevel": 100
+              }
+            },
+            {
+              "id": "00000000-0000-0000-0000-000000000000",
+              "playerName": "Player 8",
+              "playerHashtag": "EUW",
+              "championAssets": {
+                "id": 893,
+                "alias": "Aurora",
+                "name": "Aurora",
+                "splashCenteredImg": "cache/game/15.5/champion/Aurora/splashCentered.jpg",
+                "splashImg": "cache/game/15.5/champion/Aurora/splash.jpg",
+                "loadingImg": "cache/game/15.5/champion/Aurora/loading.png",
+                "squareImg": "cache/game/15.5/champion/Aurora/square.png"
+              },
+              "abilities": [
+                {
+                  "identifier": "AuroraQ",
+                  "displayName": "AuroraQ",
+                  "slot": "Q",
+                  "totalCooldown": 4,
+                  "cooldown": 5,
+                  "level": 1,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "AuroraQ",
+                    "iconAsset": "cache/game/15.5/champion/Aurora/abilities/auroraq.aurora.png",
+                    "iconName": "auroraq.aurora.png"
+                  }
+                },
+                {
+                  "identifier": "AuroraQRecast",
+                  "displayName": "AuroraQRecast",
+                  "slot": "W",
+                  "totalCooldown": 19,
+                  "cooldown": 11,
+                  "level": 4,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "AuroraQRecast",
+                    "iconAsset": "cache/game/15.5/champion/Aurora/abilities/auroraq2.aurora.png",
+                    "iconName": "auroraq2.aurora.png"
+                  }
+                },
+                {
+                  "identifier": "AuroraW",
+                  "displayName": "AuroraW",
+                  "slot": "E",
+                  "totalCooldown": 10,
+                  "cooldown": 0,
+                  "level": 1,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "AuroraW",
+                    "iconAsset": "cache/game/15.5/champion/Aurora/abilities/auroraw.aurora.png",
+                    "iconName": "auroraw.aurora.png"
+                  }
+                },
+                {
+                  "identifier": "AuroraE",
+                  "displayName": "AuroraE",
+                  "slot": "R",
+                  "totalCooldown": 73,
+                  "cooldown": 0,
+                  "level": 4,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "AuroraE",
+                    "iconAsset": "cache/game/15.5/champion/Aurora/abilities/aurorae.aurora.png",
+                    "iconName": "aurorae.aurora.png"
+                  }
+                },
+                {
+                  "identifier": "3032_innervating_locket",
+                  "displayName": "3032_innervating_locket",
+                  "slot": "D",
+                  "totalCooldown": 5,
+                  "cooldown": 0,
+                  "level": 5,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "3032_innervating_locket",
+                    "iconAsset": "cache/game/15.5/summoner/3032_innervating_locket.png",
+                    "iconName": "3032_innervating_locket.png"
+                  }
+                },
+                {
+                  "identifier": "19",
+                  "displayName": "19",
+                  "slot": "D",
+                  "totalCooldown": 91,
+                  "cooldown": 39,
+                  "level": 2,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "19",
+                    "iconAsset": "cache/game/15.5/summoner/19.png",
+                    "iconName": "19.png"
+                  }
+                }
+              ],
+              "perks": [
+                {
+                  "id": 8345,
+                  "name": "Biscuit Delivery",
+                  "iconPath": "cache/game/15.5/perk/8345.png"
+                },
+                {
+                  "id": 8135,
+                  "name": "Treasure Hunter",
+                  "iconPath": "cache/game/15.5/perk/8135.png"
+                }
+              ],
+              "health": {
+                "current": 2860,
+                "max": 3000,
+                "shield": 0,
+                "physicalShield": 0,
+                "magicalShield": 0
+              },
+              "resource": {
+                "type": "Mana",
+                "current": 764,
+                "max": 3000
+              },
+              "stacksData": null,
+              "hasBaron": false,
+              "hasElder": false,
+              "level": 1,
+              "experience": {
+                "previousLevel": 0,
+                "current": 58,
+                "nextLevel": 100
+              }
+            },
+            {
+              "id": "00000000-0000-0000-0000-000000000000",
+              "playerName": "Player 9",
+              "playerHashtag": "EUW",
+              "championAssets": {
+                "id": 84,
+                "alias": "Akali",
+                "name": "Akali",
+                "splashCenteredImg": "cache/game/15.5/champion/Akali/splashCentered.jpg",
+                "splashImg": "cache/game/15.5/champion/Akali/splash.jpg",
+                "loadingImg": "cache/game/15.5/champion/Akali/loading.png",
+                "squareImg": "cache/game/15.5/champion/Akali/square.png"
+              },
+              "abilities": [
+                {
+                  "identifier": "AkaliRb",
+                  "displayName": "AkaliRb",
+                  "slot": "Q",
+                  "totalCooldown": 98,
+                  "cooldown": 0,
+                  "level": 4,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "AkaliRb",
+                    "iconAsset": "cache/game/15.5/champion/Akali/abilities/akali_r2.png",
+                    "iconName": "akali_r2.png"
+                  }
+                },
+                {
+                  "identifier": "AkaliR",
+                  "displayName": "AkaliR",
+                  "slot": "W",
+                  "totalCooldown": 99,
+                  "cooldown": 0,
+                  "level": 2,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "AkaliR",
+                    "iconAsset": "cache/game/15.5/champion/Akali/abilities/akali_r.png",
+                    "iconName": "akali_r.png"
+                  }
+                },
+                {
+                  "identifier": "AkaliQ",
+                  "displayName": "AkaliQ",
+                  "slot": "E",
+                  "totalCooldown": 31,
+                  "cooldown": 70,
+                  "level": 4,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "AkaliQ",
+                    "iconAsset": "cache/game/15.5/champion/Akali/abilities/akali_q.png",
+                    "iconName": "akali_q.png"
+                  }
+                },
+                {
+                  "identifier": "AkaliW",
+                  "displayName": "AkaliW",
+                  "slot": "R",
+                  "totalCooldown": 31,
+                  "cooldown": 0,
+                  "level": 1,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "AkaliW",
+                    "iconAsset": "cache/game/15.5/champion/Akali/abilities/akali_w.png",
+                    "iconName": "akali_w.png"
+                  }
+                },
+                {
+                  "identifier": "ultbook_zac_square",
+                  "displayName": "ultbook_zac_square",
+                  "slot": "D",
+                  "totalCooldown": 31,
+                  "cooldown": 48,
+                  "level": 2,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "ultbook_zac_square",
+                    "iconAsset": "cache/game/15.5/summoner/ultbook_zac_square.png",
+                    "iconName": "ultbook_zac_square.png"
+                  }
+                },
+                {
+                  "identifier": "3092_kages_last_breath",
+                  "displayName": "3092_kages_last_breath",
+                  "slot": "D",
+                  "totalCooldown": 84,
+                  "cooldown": 0,
+                  "level": 5,
+                  "charges": 0,
+                  "assets": {
+                    "spellName": "3092_kages_last_breath",
+                    "iconAsset": "cache/game/15.5/summoner/3092_kages_last_breath.png",
+                    "iconName": "3092_kages_last_breath.png"
+                  }
+                }
+              ],
+              "perks": [
+                {
+                  "id": 8109,
+                  "name": "The Wicked Maestro ",
+                  "iconPath": "cache/game/15.5/perk/8109.png"
+                },
+                {
+                  "id": 8137,
+                  "name": "Sixth Sense",
+                  "iconPath": "cache/game/15.5/perk/8137.png"
+                }
+              ],
+              "health": {
+                "current": 2533,
+                "max": 3000,
+                "shield": 0,
+                "physicalShield": 0,
+                "magicalShield": 0
+              },
+              "resource": {
+                "type": "Mana",
+                "current": 2799,
+                "max": 3000
+              },
+              "stacksData": null,
+              "hasBaron": false,
+              "hasElder": false,
+              "level": 3,
+              "experience": {
+                "previousLevel": 0,
+                "current": 44,
+                "nextLevel": 100
+              }
+            }
+          ]
+        }
+      ],
+      "scoreboardBottom": {
+        "gameTime": 34,
+        "teams": [
+          {
+            "id": "4294967293",
+            "players": [
+              {
+                "champion": {
+                  "name": "Elise",
+                  "squareImg": "cache/game/15.5/champion/Elise/square.png"
+                },
+                "name": "",
+                "kills": 0,
+                "deaths": 4,
+                "assists": 0,
+                "level": 16,
+                "gold": 9076,
+                "totalGold": 9076,
+                "creepScore": 125,
+                "visionScore": 33,
+                "shutdown": 128,
+                "respawnTimeRemaining": null,
+                "hasFeatsOfStrength": false,
+                "items": [
+                  {
+                    "id": 9192,
+                    "displayName": "Paw Print Poisoner",
+                    "asset": "cache/game/15.5/item/item/9192_poisontrail.png",
+                    "modifier": null,
+                    "cost": 0,
+                    "count": 1,
+                    "combineCost": 0,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 1106,
+                    "displayName": "Gustwalker Hatchling",
+                    "asset": "cache/game/15.5/item/item/1102_jungle_t1_gustwalkerhatchling.png",
+                    "modifier": null,
+                    "cost": 450,
+                    "count": 1,
+                    "combineCost": 450,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 3870,
+                    "displayName": "Dream Maker",
+                    "asset": "cache/game/15.5/item/item/3870_dreammaker.png",
+                    "modifier": null,
+                    "cost": 400,
+                    "count": 1,
+                    "combineCost": 0,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 3902,
+                    "displayName": "<rarityLegendary>Death's Daughter</rarityLegendary><br><subtitleLeft> <silver>500 Silver Serpents</silver></subtitleLeft>",
+                    "asset": "cache/game/15.5/item/item/3902_champ_t0_deathsdaughtercircle.png",
+                    "modifier": null,
+                    "cost": 0,
+                    "count": 1,
+                    "combineCost": 0,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 222065,
+                    "displayName": "Shurelya's Battlesong",
+                    "asset": "cache/game/15.5/item/item/2065_tank_t4_shurelyasbattlesong.png",
+                    "modifier": null,
+                    "cost": 2500,
+                    "count": 1,
+                    "combineCost": 2500,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 9272,
+                    "displayName": "YuumiBot_Final_FINAL",
+                    "asset": "cache/game/15.5/item/item/9272_twinshadows_evolve.png",
+                    "modifier": null,
+                    "cost": 0,
+                    "count": 1,
+                    "combineCost": 0,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 222141,
+                    "displayName": "Cappa Juice",
+                    "asset": "cache/game/15.5/item/item/icon_item_souljuice_funhat.png",
+                    "modifier": null,
+                    "cost": 500,
+                    "count": 1,
+                    "combineCost": 500,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 24
+                  }
+                ]
+              },
+              {
+                "champion": {
+                  "id": 83,
+                  "alias": "Yorick",
+                  "name": "Yorick",
+                  "splashCenteredImg": "cache/game/15.5/champion/Yorick/splashCentered.jpg",
+                  "splashImg": "cache/game/15.5/champion/Yorick/splash.jpg",
+                  "loadingImg": "cache/game/15.5/champion/Yorick/loading.png",
+                  "squareImg": "cache/game/15.5/champion/Yorick/square.png"
+                },
+                "name": "",
+                "kills": 7,
+                "deaths": 7,
+                "assists": 5,
+                "level": 4,
+                "gold": 1928,
+                "totalGold": 6018,
+                "creepScore": 226,
+                "visionScore": 56,
+                "shutdown": 215,
+                "respawnTimeRemaining": null,
+                "hasFeatsOfStrength": false,
+                "items": [
+                  {
+                    "id": 6693,
+                    "displayName": "Prowler's Claw",
+                    "asset": "cache/game/15.5/item/item/6693_assassin_t4_prowlersclaw.png",
+                    "modifier": null,
+                    "cost": 2850,
+                    "count": 1,
+                    "combineCost": 800,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 223142,
+                    "displayName": "Youmuu's Ghostblade",
+                    "asset": "cache/game/15.5/item/item/3142_assassin_t3_youmuusghostblade.png",
+                    "modifier": null,
+                    "cost": 2500,
+                    "count": 1,
+                    "combineCost": 2500,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 4636,
+                    "displayName": "Night Harvester",
+                    "asset": "cache/game/15.5/item/item/4636_mage_t4_nightharvester.png",
+                    "modifier": null,
+                    "cost": 2765,
+                    "count": 1,
+                    "combineCost": 815,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 3508,
+                    "displayName": "Essence Reaver",
+                    "asset": "cache/game/15.5/item/item/3508_marksman_t3_essencereaver.png",
+                    "modifier": null,
+                    "cost": 2900,
+                    "count": 1,
+                    "combineCost": 375,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 3876,
+                    "displayName": "Solstice Sleigh",
+                    "asset": "cache/game/15.5/item/item/3876_solticesleigh.png",
+                    "modifier": null,
+                    "cost": 400,
+                    "count": 1,
+                    "combineCost": 0,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 3211,
+                    "displayName": "Spectre's Cowl",
+                    "asset": "cache/game/15.5/item/item/3211_tank_t2_spectrescowl.png",
+                    "modifier": null,
+                    "cost": 1250,
+                    "count": 1,
+                    "combineCost": 150,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 3184,
+                    "displayName": "Guardian's Hammer",
+                    "asset": "cache/game/15.5/item/item/3177_aram_t1_guardianshammer.png",
+                    "modifier": null,
+                    "cost": 950,
+                    "count": 1,
+                    "combineCost": 950,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 56
+                  }
+                ]
+              },
+              {
+                "champion": {
+                  "id": 126,
+                  "alias": "Jayce",
+                  "name": "Jayce",
+                  "splashCenteredImg": "cache/game/15.5/champion/Jayce/splashCentered.jpg",
+                  "splashImg": "cache/game/15.5/champion/Jayce/splash.jpg",
+                  "loadingImg": "cache/game/15.5/champion/Jayce/loading.png",
+                  "squareImg": "cache/game/15.5/champion/Jayce/square.png"
+                },
+                "name": "",
+                "kills": 1,
+                "deaths": 5,
+                "assists": 3,
+                "level": 14,
+                "gold": 3128,
+                "totalGold": 8838,
+                "creepScore": 194,
+                "visionScore": 87,
+                "shutdown": 366,
+                "respawnTimeRemaining": null,
+                "hasFeatsOfStrength": false,
+                "items": [
+                  {
+                    "id": 223107,
+                    "displayName": "Redemption",
+                    "asset": "cache/game/15.5/item/item/3107_enchanter_t3_redemption.png",
+                    "modifier": null,
+                    "cost": 2500,
+                    "count": 1,
+                    "combineCost": 2500,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 1036,
+                    "displayName": "Long Sword",
+                    "asset": "cache/game/15.5/item/item/1036_class_t1_longsword.png",
+                    "modifier": null,
+                    "cost": 350,
+                    "count": 1,
+                    "combineCost": 350,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 223032,
+                    "displayName": "Yun Tal Wildarrows",
+                    "asset": "cache/game/15.5/item/item/3032_yuntalwildarrows.png",
+                    "modifier": null,
+                    "cost": 2500,
+                    "count": 1,
+                    "combineCost": 2500,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 1040,
+                    "displayName": "Obsidian Edge",
+                    "asset": "cache/game/15.5/item/item/1040_obsidianedge.png",
+                    "modifier": null,
+                    "cost": 350,
+                    "count": 1,
+                    "combineCost": 350,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 9192,
+                    "displayName": "Paw Print Poisoner",
+                    "asset": "cache/game/15.5/item/item/9192_poisontrail.png",
+                    "modifier": null,
+                    "cost": 0,
+                    "count": 1,
+                    "combineCost": 0,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 323504,
+                    "displayName": "Ardent Censer",
+                    "asset": "cache/game/15.5/item/item/3504_enchanter_t3_ardentcenser.png",
+                    "modifier": null,
+                    "cost": 2600,
+                    "count": 1,
+                    "combineCost": 700,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 6692,
+                    "displayName": "Eclipse",
+                    "asset": "cache/game/15.5/item/item/6692_assassin_t4_eclipse.png",
+                    "modifier": null,
+                    "cost": 2900,
+                    "count": 1,
+                    "combineCost": 625,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 57
+                  }
+                ]
+              },
+              {
+                "champion": {
+                  "id": 84,
+                  "alias": "Akali",
+                  "name": "Akali",
+                  "splashCenteredImg": "cache/game/15.5/champion/Akali/splashCentered.jpg",
+                  "splashImg": "cache/game/15.5/champion/Akali/splash.jpg",
+                  "loadingImg": "cache/game/15.5/champion/Akali/loading.png",
+                  "squareImg": "cache/game/15.5/champion/Akali/square.png"
+                },
+                "name": "",
+                "kills": 5,
+                "deaths": 5,
+                "assists": 8,
+                "level": 3,
+                "gold": 2888,
+                "totalGold": 7194,
+                "creepScore": 138,
+                "visionScore": 4,
+                "shutdown": 153,
+                "respawnTimeRemaining": null,
+                "hasFeatsOfStrength": false,
+                "items": [
+                  {
+                    "id": 9177,
+                    "displayName": "Searing Shortbow",
+                    "asset": "cache/game/15.5/item/item/9177_firestrike.png",
+                    "modifier": null,
+                    "cost": 0,
+                    "count": 1,
+                    "combineCost": 0,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 9408,
+                    "displayName": "Carrot Crash",
+                    "asset": "cache/game/15.5/item/item/9408_riven_weapon_evolve.png",
+                    "modifier": null,
+                    "cost": 0,
+                    "count": 1,
+                    "combineCost": 0,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 443063,
+                    "displayName": "Eleisa's Miracle",
+                    "asset": "cache/game/15.5/item/item/3063_elishasmiracle.png",
+                    "modifier": null,
+                    "cost": 1000,
+                    "count": 1,
+                    "combineCost": 1000,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 4642,
+                    "displayName": "Bandleglass Mirror",
+                    "asset": "cache/game/15.5/item/item/4642_enchanter_t2_bandleglassmirror.png",
+                    "modifier": null,
+                    "cost": 900,
+                    "count": 1,
+                    "combineCost": 50,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 9171,
+                    "displayName": "Cyclonic Slicers",
+                    "asset": "cache/game/15.5/item/item/9171_holybauble.png",
+                    "modifier": null,
+                    "cost": 0,
+                    "count": 1,
+                    "combineCost": 0,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 3903,
+                    "displayName": "<rarityLegendary>Raise Morale</rarityLegendary><br><subtitleLeft> <silver>500 Silver Serpents</silver></subtitleLeft>",
+                    "asset": "cache/game/15.5/item/item/3903_champ_t0_raisemoralecircle.png",
+                    "modifier": null,
+                    "cost": 0,
+                    "count": 1,
+                    "combineCost": 0,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 3032,
+                    "displayName": "Yun Tal Wildarrows",
+                    "asset": "cache/game/15.5/item/item/3032_yuntalwildarrows.png",
+                    "modifier": null,
+                    "cost": 3000,
+                    "count": 1,
+                    "combineCost": 750,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 85
+                  }
+                ]
+              },
+              {
+                "champion": {
+                  "id": 427,
+                  "alias": "Ivern",
+                  "name": "Ivern",
+                  "splashCenteredImg": "cache/game/15.5/champion/Ivern/splashCentered.jpg",
+                  "splashImg": "cache/game/15.5/champion/Ivern/splash.jpg",
+                  "loadingImg": "cache/game/15.5/champion/Ivern/loading.png",
+                  "squareImg": "cache/game/15.5/champion/Ivern/square.png"
+                },
+                "name": "",
+                "kills": 1,
+                "deaths": 6,
+                "assists": 7,
+                "level": 17,
+                "gold": 4324,
+                "totalGold": 9535,
+                "creepScore": 263,
+                "visionScore": 8,
+                "shutdown": 490,
+                "respawnTimeRemaining": null,
+                "hasFeatsOfStrength": false,
+                "items": [
+                  {
+                    "id": 3073,
+                    "displayName": "Experimental Hexplate",
+                    "asset": "cache/game/15.5/item/item/3073_hexaegis.png",
+                    "modifier": null,
+                    "cost": 3000,
+                    "count": 1,
+                    "combineCost": 500,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 4016,
+                    "displayName": "Wordless Promise",
+                    "asset": "cache/game/15.5/item/item/4016_wordlesspromise.png",
+                    "modifier": null,
+                    "cost": 2500,
+                    "count": 1,
+                    "combineCost": 2500,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 220010,
+                    "displayName": "Prismatic Stat Voucher",
+                    "asset": "cache/game/15.5/item/item/3865_worldatlas.png",
+                    "modifier": null,
+                    "cost": 750,
+                    "count": 1,
+                    "combineCost": 750,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 223115,
+                    "displayName": "Nashor's Tooth",
+                    "asset": "cache/game/15.5/item/item/3115_mage_t3_nashorstooth.png",
+                    "modifier": null,
+                    "cost": 2500,
+                    "count": 1,
+                    "combineCost": 2500,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 3145,
+                    "displayName": "Hextech Alternator",
+                    "asset": "cache/game/15.5/item/item/3145_mage_t2_hextechalternator.png",
+                    "modifier": null,
+                    "cost": 1100,
+                    "count": 1,
+                    "combineCost": 300,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 1519,
+                    "displayName": "Structure Bounty",
+                    "asset": "cache/game/15.5/item/item/2319_sackofgold.png",
+                    "modifier": null,
+                    "cost": 0,
+                    "count": 1,
+                    "combineCost": 0,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 3074,
+                    "displayName": "Ravenous Hydra",
+                    "asset": "cache/game/15.5/item/item/3074_fighter_t3_ravenoushydra.png",
+                    "modifier": null,
+                    "cost": 3300,
+                    "count": 1,
+                    "combineCost": 150,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 61
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "4294967294",
+            "name": "Red Team",
+            "tag": "RED",
+            "players": [
+              {
+                "champion": {
+                  "id": 22,
+                  "alias": "Ashe",
+                  "name": "Ashe",
+                  "splashCenteredImg": "cache/game/15.5/champion/Ashe/splashCentered.jpg",
+                  "splashImg": "cache/game/15.5/champion/Ashe/splash.jpg",
+                  "loadingImg": "cache/game/15.5/champion/Ashe/loading.png",
+                  "squareImg": "cache/game/15.5/champion/Ashe/square.png"
+                },
+                "name": "",
+                "kills": 8,
+                "deaths": 7,
+                "assists": 9,
+                "level": 14,
+                "gold": 492,
+                "totalGold": 4864,
+                "creepScore": 260,
+                "visionScore": 87,
+                "shutdown": 481,
+                "respawnTimeRemaining": null,
+                "hasFeatsOfStrength": false,
+                "items": [
+                  {
+                    "id": 328020,
+                    "displayName": "Abyssal Mask",
+                    "asset": "cache/game/15.5/item/item/8020_tank_t3_abyssalmask.png",
+                    "modifier": null,
+                    "cost": 2850,
+                    "count": 1,
+                    "combineCost": 1200,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 323222,
+                    "displayName": "Mikael's Blessing",
+                    "asset": "cache/game/15.5/item/item/3222_enchanter_t3_mikaelsblessing.png",
+                    "modifier": null,
+                    "cost": 2800,
+                    "count": 1,
+                    "combineCost": 1000,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 3123,
+                    "displayName": "Executioner's Calling",
+                    "asset": "cache/game/15.5/item/item/3123_fighter_t2_executionerscalling.png",
+                    "modifier": null,
+                    "cost": 800,
+                    "count": 1,
+                    "combineCost": 450,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 9300,
+                    "displayName": "Meow Meow",
+                    "asset": "cache/game/15.5/item/item/9300_jinx_weapon.png",
+                    "modifier": null,
+                    "cost": 0,
+                    "count": 1,
+                    "combineCost": 0,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 444644,
+                    "displayName": "Crown of the Shattered Queen",
+                    "asset": "cache/game/15.5/item/item/4644_crown.png",
+                    "modifier": null,
+                    "cost": 1000,
+                    "count": 1,
+                    "combineCost": 1000,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 443061,
+                    "displayName": "Force Of Entropy",
+                    "asset": "cache/game/15.5/item/item/3061_forceofentropy.png",
+                    "modifier": null,
+                    "cost": 1000,
+                    "count": 1,
+                    "combineCost": 1000,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 3903,
+                    "displayName": "<rarityLegendary>Raise Morale</rarityLegendary><br><subtitleLeft> <silver>500 Silver Serpents</silver></subtitleLeft>",
+                    "asset": "cache/game/15.5/item/item/3903_champ_t0_raisemoralecircle.png",
+                    "modifier": null,
+                    "cost": 0,
+                    "count": 1,
+                    "combineCost": 0,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 50
+                  }
+                ]
+              },
+              {
+                "champion": {
+                  "id": 96,
+                  "alias": "KogMaw",
+                  "name": "Kog'Maw",
+                  "splashCenteredImg": "cache/game/15.5/champion/KogMaw/splashCentered.jpg",
+                  "splashImg": "cache/game/15.5/champion/KogMaw/splash.jpg",
+                  "loadingImg": "cache/game/15.5/champion/KogMaw/loading.png",
+                  "squareImg": "cache/game/15.5/champion/KogMaw/square.png"
+                },
+                "name": "",
+                "kills": 1,
+                "deaths": 0,
+                "assists": 4,
+                "level": 16,
+                "gold": 6304,
+                "totalGold": 8075,
+                "creepScore": 42,
+                "visionScore": 94,
+                "shutdown": 548,
+                "respawnTimeRemaining": null,
+                "hasFeatsOfStrength": false,
+                "items": [
+                  {
+                    "id": 3867,
+                    "displayName": "Bounty of Worlds",
+                    "asset": "cache/game/15.5/item/item/3867_bountyofworlds.png",
+                    "modifier": null,
+                    "cost": 400,
+                    "count": 1,
+                    "combineCost": 400,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 224633,
+                    "displayName": "Riftmaker",
+                    "asset": "cache/game/15.5/item/item/4633_mage_t4_riftmaker.png",
+                    "modifier": null,
+                    "cost": 2500,
+                    "count": 1,
+                    "combineCost": 2500,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 3011,
+                    "displayName": "Chemtech Putrifier",
+                    "asset": "cache/game/15.5/item/item/3011_enchanter_t3_chemtechfumigator.png",
+                    "modifier": null,
+                    "cost": 1900,
+                    "count": 1,
+                    "combineCost": 500,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 9190,
+                    "displayName": "Echoing Batblades",
+                    "asset": "cache/game/15.5/item/item/9190_scatterarrows.png",
+                    "modifier": null,
+                    "cost": 0,
+                    "count": 1,
+                    "combineCost": 0,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 4003,
+                    "displayName": "Lifeline",
+                    "asset": "cache/game/15.5/item/item/4003_assassin_t2_lifeline.png",
+                    "modifier": null,
+                    "cost": 2500,
+                    "count": 1,
+                    "combineCost": 550,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 6665,
+                    "displayName": "Jak'Sho, The Protean",
+                    "asset": "cache/game/15.5/item/item/6665_tank_t4_jakshotheprotean.png",
+                    "modifier": null,
+                    "cost": 3200,
+                    "count": 1,
+                    "combineCost": 650,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 9185,
+                    "displayName": "Anti-Shark Sea Mine",
+                    "asset": "cache/game/15.5/item/item/9185_firebomb.png",
+                    "modifier": null,
+                    "cost": 0,
+                    "count": 1,
+                    "combineCost": 0,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 57
+                  }
+                ]
+              },
+              {
+                "champion": {
+                  "id": 99,
+                  "alias": "Lux",
+                  "name": "Lux",
+                  "splashCenteredImg": "cache/game/15.5/champion/Lux/splashCentered.jpg",
+                  "splashImg": "cache/game/15.5/champion/Lux/splash.jpg",
+                  "loadingImg": "cache/game/15.5/champion/Lux/loading.png",
+                  "squareImg": "cache/game/15.5/champion/Lux/square.png"
+                },
+                "name": "",
+                "kills": 0,
+                "deaths": 9,
+                "assists": 4,
+                "level": 5,
+                "gold": 5942,
+                "totalGold": 7742,
+                "creepScore": 209,
+                "visionScore": 78,
+                "shutdown": 135,
+                "respawnTimeRemaining": null,
+                "hasFeatsOfStrength": false,
+                "items": [
+                  {
+                    "id": 220001,
+                    "displayName": "Legendary Fighter Item",
+                    "asset": "cache/game/15.5/item/item/220001_fighteranvil.png",
+                    "modifier": null,
+                    "cost": 2000,
+                    "count": 1,
+                    "combineCost": 2000,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 223504,
+                    "displayName": "Ardent Censer",
+                    "asset": "cache/game/15.5/item/item/3504_enchanter_t3_ardentcenser.png",
+                    "modifier": null,
+                    "cost": 2500,
+                    "count": 1,
+                    "combineCost": 2500,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 2033,
+                    "displayName": "Corrupting Potion",
+                    "asset": "cache/game/15.5/item/item/2033_class_t1_corruptingpotion.png",
+                    "modifier": null,
+                    "cost": 500,
+                    "count": 1,
+                    "combineCost": 350,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 223074,
+                    "displayName": "Ravenous Hydra",
+                    "asset": "cache/game/15.5/item/item/3074_fighter_t3_ravenoushydra.png",
+                    "modifier": null,
+                    "cost": 2500,
+                    "count": 1,
+                    "combineCost": 2500,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 3857,
+                    "displayName": "Pauldrons of Whiterock",
+                    "asset": "cache/game/15.5/item/item/3857_tank_t3_pauldronsofwhiterock.png",
+                    "modifier": null,
+                    "cost": 400,
+                    "count": 1,
+                    "combineCost": 400,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 1018,
+                    "displayName": "Cloak of Agility",
+                    "asset": "cache/game/15.5/item/item/1018_base_t1_cloakagility.png",
+                    "modifier": null,
+                    "cost": 600,
+                    "count": 1,
+                    "combineCost": 600,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 1054,
+                    "displayName": "Doran's Shield",
+                    "asset": "cache/game/15.5/item/item/1054_tank_t1_doransshield.png",
+                    "modifier": null,
+                    "cost": 450,
+                    "count": 1,
+                    "combineCost": 450,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 48
+                  }
+                ]
+              },
+              {
+                "champion": {
+                  "id": 893,
+                  "alias": "Aurora",
+                  "name": "Aurora",
+                  "splashCenteredImg": "cache/game/15.5/champion/Aurora/splashCentered.jpg",
+                  "splashImg": "cache/game/15.5/champion/Aurora/splash.jpg",
+                  "loadingImg": "cache/game/15.5/champion/Aurora/loading.png",
+                  "squareImg": "cache/game/15.5/champion/Aurora/square.png"
+                },
+                "name": "",
+                "kills": 8,
+                "deaths": 7,
+                "assists": 3,
+                "level": 11,
+                "gold": 9152,
+                "totalGold": 9152,
+                "creepScore": 93,
+                "visionScore": 82,
+                "shutdown": 121,
+                "respawnTimeRemaining": null,
+                "hasFeatsOfStrength": false,
+                "items": [
+                  {
+                    "id": 226695,
+                    "displayName": "Serpent's Fang",
+                    "asset": "cache/game/15.5/item/item/6695_assassin_t3_serpentsfang.png",
+                    "modifier": null,
+                    "cost": 2500,
+                    "count": 1,
+                    "combineCost": 2500,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 6662,
+                    "displayName": "Iceborn Gauntlet",
+                    "asset": "cache/game/15.5/item/item/6662_tank_t3_iceborngauntlet.png",
+                    "modifier": null,
+                    "cost": 2900,
+                    "count": 1,
+                    "combineCost": 800,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 446671,
+                    "displayName": "Galeforce",
+                    "asset": "cache/game/15.5/item/item/6671_marksman_t4_galeforce.png",
+                    "modifier": null,
+                    "cost": 1000,
+                    "count": 1,
+                    "combineCost": 1000,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 4637,
+                    "displayName": "Demonic Embrace",
+                    "asset": "cache/game/15.5/item/item/4637_mage_t3_demonicembrace.png",
+                    "modifier": null,
+                    "cost": 3000,
+                    "count": 1,
+                    "combineCost": 850,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 3033,
+                    "displayName": "Mortal Reminder",
+                    "asset": "cache/game/15.5/item/item/3033_marksman_t3_mortalreminder.png",
+                    "modifier": null,
+                    "cost": 3300,
+                    "count": 1,
+                    "combineCost": 450,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 9172,
+                    "displayName": "YuumiBot",
+                    "asset": "cache/game/15.5/item/item/9172_twinshadows.png",
+                    "modifier": null,
+                    "cost": 0,
+                    "count": 1,
+                    "combineCost": 0,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 446693,
+                    "displayName": "Prowler's Claw",
+                    "asset": "cache/game/15.5/item/item/6693_assassin_t4_prowlersclaw.png",
+                    "modifier": null,
+                    "cost": 1000,
+                    "count": 1,
+                    "combineCost": 1000,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 86
+                  }
+                ]
+              },
+              {
+                "champion": {
+                  "id": 84,
+                  "alias": "Akali",
+                  "name": "Akali",
+                  "splashCenteredImg": "cache/game/15.5/champion/Akali/splashCentered.jpg",
+                  "splashImg": "cache/game/15.5/champion/Akali/splash.jpg",
+                  "loadingImg": "cache/game/15.5/champion/Akali/loading.png",
+                  "squareImg": "cache/game/15.5/champion/Akali/square.png"
+                },
+                "name": "",
+                "kills": 2,
+                "deaths": 6,
+                "assists": 6,
+                "level": 3,
+                "gold": 5954,
+                "totalGold": 7384,
+                "creepScore": 57,
+                "visionScore": 14,
+                "shutdown": 179,
+                "respawnTimeRemaining": null,
+                "hasFeatsOfStrength": false,
+                "items": [
+                  {
+                    "id": 226655,
+                    "displayName": "Luden's Companion",
+                    "asset": "cache/game/15.5/item/item/6655_casterscompanion.png",
+                    "modifier": null,
+                    "cost": 2500,
+                    "count": 1,
+                    "combineCost": 2500,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 9284,
+                    "displayName": "Rapid Rabbit Raindown",
+                    "asset": "cache/game/15.5/item/item/9284_starstrike_evolve.png",
+                    "modifier": null,
+                    "cost": 0,
+                    "count": 1,
+                    "combineCost": 0,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 226675,
+                    "displayName": "Navori Flickerblades",
+                    "asset": "cache/game/15.5/item/item/6675_navoriflickerblade.png",
+                    "modifier": null,
+                    "cost": 2500,
+                    "count": 1,
+                    "combineCost": 2500,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 3020,
+                    "displayName": "Sorcerer's Shoes",
+                    "asset": "cache/game/15.5/item/item/3020_class_t2_sorcerersshoes.png",
+                    "modifier": null,
+                    "cost": 1100,
+                    "count": 1,
+                    "combineCost": 800,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 222503,
+                    "displayName": "Blackfire Torch",
+                    "asset": "cache/game/15.5/item/item/2503_blackfiretorch64.png",
+                    "modifier": null,
+                    "cost": 2500,
+                    "count": 1,
+                    "combineCost": 2500,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 9302,
+                    "displayName": "Sound Wave",
+                    "asset": "cache/game/15.5/item/item/9302_seraphine_weapon.png",
+                    "modifier": null,
+                    "cost": 0,
+                    "count": 1,
+                    "combineCost": 0,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 0
+                  },
+                  {
+                    "id": 223146,
+                    "displayName": "Hextech Gunblade",
+                    "asset": "cache/game/15.5/item/item/3146_hextechgunblade.png",
+                    "modifier": null,
+                    "cost": 2500,
+                    "count": 1,
+                    "combineCost": 2500,
+                    "stats": [],
+                    "cooldown": 0,
+                    "maxCooldown": 0,
+                    "stacks": 0,
+                    "visionScore": 9
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "baronPitTimer": {
+        "timeTotal": 45,
+        "timeLeft": 12.091,
+        "subType": "style/ingame/objectives/baronpit/baron.png",
+        "mapSide": null
+      },
+      "atakhanTimer": null,
+      "dragonPitTimer": {
+        "timeTotal": 45,
+        "timeLeft": 12.091,
+        "subType": "style/ingame/objectives/dragonpit/fire.png",
+        "mapSide": null
+      },
+      "inhibitors": [
+        {
+          "team": "BLUE",
+          "teamid": 4294967293,
+          "side": 1,
+          "inhibitors": [
+            {
+              "timeTotal": 300,
+              "timeLeft": 207.12299,
+              "subType": "inhibitor",
+              "mapSide": null
+            },
+            {
+              "timeTotal": 300,
+              "timeLeft": 0,
+              "subType": "inhibitor",
+              "mapSide": null
+            },
+            {
+              "timeTotal": 300,
+              "timeLeft": 0,
+              "subType": "inhibitor",
+              "mapSide": null
+            }
+          ]
+        },
+        {
+          "team": "RED",
+          "teamid": 4294967294,
+          "side": 2,
+          "inhibitors": [
+            {
+              "timeTotal": 300,
+              "timeLeft": 272.123,
+              "subType": "inhibitor",
+              "mapSide": null
+            },
+            {
+              "timeTotal": 300,
+              "timeLeft": 0,
+              "subType": "inhibitor",
+              "mapSide": null
+            },
+            {
+              "timeTotal": 300,
+              "timeLeft": 0,
+              "subType": "inhibitor",
+              "mapSide": null
+            }
+          ]
+        }
+      ]
+    }
+  }
