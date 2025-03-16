@@ -18,16 +18,28 @@ export function parseGameData(data) {
     };
 
     // 📌 Lấy thông tin scoreboard của 2 đội
-    const scoreboard = data.state?.scoreboard?.teams.map((team) => ({
-      gold: team.gold || 0,
-      kills: team.kills || 0,
-      towers: team.towers || 0,
-      grubs: team.grubs || 0,
-      dragons: Array.isArray(team.dragons) ? team.dragons : [],
-      featsOfStrength: team.featsOfStrength || {},
-    })) || [];
+    const scoreboard =
+      data.state?.scoreboard?.teams.map((team) => ({
+        gold: team.gold || 0,
+        kills: team.kills || 0,
+        towers: team.towers || 0,
+        grubs: team.grubs || 0,
+        dragons: Array.isArray(team.dragons) ? team.dragons : [],
+        featsOfStrength: team.featsOfStrength || {},
+      })) || [];
 
-    return { gameStatus, gameTime, baronTimer, dragonTimer, scoreboard };
+    // 📌 Lấy danh sách tên và squareImg của 10 người chơi
+    const players =
+      data.state?.tabs?.flatMap((tab) => 
+        tab.players.map((p) => ({
+          playerName: p.playerName,
+          champion: p.championAssets?.name || "Unknown",
+          health: `${p.health?.current || 0}/${p.health?.max || 0}`,
+          mana: `${p.resource?.current || 0}/${p.resource?.max || 0}`
+        }))
+      ) || [];
+
+    return { gameStatus, gameTime, baronTimer, dragonTimer, scoreboard, players };
   }
   return null;
 }
