@@ -1,14 +1,25 @@
-// Hàm kiểm tra và chuyển đổi số về "ALIVE" hoặc số nguyên
-export function convertTimer(number) {
-    if (number < 1) {
-        return "ALIVE";
-    }
-    return number >= 60 ? convertToMinutesAndSeconds(number) : Math.floor(number);
-}
+/**
+ * Chuyển đổi số giây thành định dạng mm:ss
+ * @param {number} time - Thời gian (có thể là số thập phân)
+ * @returns {string} Thời gian định dạng "mm:ss"
+ */
+export const convertTime = (time) => {
+  // Làm tròn số giây và chuyển thành số nguyên
+  const totalSeconds = Math.floor(Number(time));
+  
+  // Tính số phút và số giây
+  const minutes = Math.floor(totalSeconds / 60);
+  const seconds = totalSeconds % 60;
 
-// Hàm chuyển đổi số lớn hơn 60 thành phút:giây
-export function convertToMinutesAndSeconds(number) {
-    const minutes = Math.floor(number / 60);
-    const seconds = number % 60;
-    return `${minutes}:${seconds.toString().padStart(2, '0')}`;
-}
+  // Format với padding 0 nếu cần
+  return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+};
+
+/**
+ * Chuyển đổi số thành định dạng có đơn vị k (nghìn)
+ * @param {number} number - Số cần chuyển đổi
+ * @returns {string} Số đã được chuyển đổi (vd: "1.5k")
+ */
+export const convertToK = (number) => {
+  return `${(number / 1000).toFixed(1)}k`;
+};

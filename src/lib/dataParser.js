@@ -1,10 +1,12 @@
+import { convertTime } from "@/service/convertnumber";
+
 export function parseGameData(data) {
   if (data.type === "ingame-state-update") {
     // 📌 Lấy trạng thái của game
     const gameStatus = data.state?.gameStatus || "Unknown";
 
     // 📌 Lấy thời gian của game
-    const gameTime = data.state?.gameTime || 0;
+    const gameTime = convertTime(data.state?.gameTime || 0);
 
     // 📌 Lấy thông tin thời gian hồi Baron
     const baronTimer = {

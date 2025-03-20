@@ -2,9 +2,8 @@
 import { useEffect, useState } from "react";
 import { connectWebSocket, disconnectWebSocket } from "@/lib/websocket";
 import { parseGameData } from "@/lib/dataParser";
-import { convertToMinutesAndSeconds } from "@/service/convertnumber";
-import TimerDisplay from "@/components/TimerDisplay";
 import PlayerList from "@/components/PlayerList";
+import TimerDisplay from "@/components/TimerDisplay";
 import Scoreboard from "@/components/Scoreboard";
 
 export default function WebSocketComponent() {
@@ -39,18 +38,20 @@ export default function WebSocketComponent() {
       </p>
       <p className="mt-2">
         Time:{" "}
-        <span className="text-yellow-400">{convertToMinutesAndSeconds(gameTime)}</span> sec
+        <span className="text-yellow-400">
+          {gameTime}
+        </span>{" "}
       </p>
 
       {/* Hiển thị danh sách người chơi */}
-      <PlayerList players={players} />
+      {/* <PlayerList players={players} /> */}
 
       {/* Hiển thị bảng điểm số */}
       <Scoreboard scoreboard={scoreboard} />
 
       {/* Hiển thị thời gian Baron và Dragon */}
-      {baronTimer && <TimerDisplay timer={baronTimer} title="Baron Pit Timer" />}
-      {dragonTimer && <TimerDisplay timer={dragonTimer} title="Dragon Pit Timer" />}
+      {/* {baronTimer && <TimerDisplay timer={baronTimer} title="Baron Pit Timer" />}
+      {dragonTimer && <TimerDisplay timer={dragonTimer} title="Dragon Pit Timer" />} */}
     </div>
   );
 }

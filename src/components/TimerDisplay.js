@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { convertTimer } from "@/service/convertnumber";
 import { convertImagePath } from "@/service/imageservice";
 
 const TimerDisplay = ({ timer, title }) => {
@@ -29,8 +28,8 @@ const TimerDisplay = ({ timer, title }) => {
       </div>
       <p>
         Time Left:{" "}
-        <span className="text-red-400">{convertTimer(timer.timeLeft)}</span>{" "}
-        {convertTimer(timer.timeLeft) === "ALIVE" ? "" : "sec"}
+        <span className="text-red-400">{timer.timeLeft}</span>{" "}
+        {timer.timeLeft === "ALIVE" ? "" : "sec"}
       </p>
     </div>
   );
