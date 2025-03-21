@@ -1,8 +1,13 @@
 import Image from "next/image";
-import { convertImagePath } from "@/service/imageservice";
 
 const TimerDisplay = ({ timer, title }) => {
   if (!timer) return null;
+
+  // Xử lý đường dẫn hình ảnh, đảm bảo hợp lệ
+  const imageUrl =
+    timer.subType && timer.subType.startsWith("http")
+      ? timer.subType
+      : `http://localhost:58869/${timer.subType || "default.png"}`;
 
   return (
     <div className="mt-4 p-3 bg-gray-700 rounded">
@@ -11,8 +16,8 @@ const TimerDisplay = ({ timer, title }) => {
         {timer.subType && (
           <div className="w-8 h-8 relative">
             <Image
-              src={convertImagePath(timer.subType)}
-              alt={timer.subType}
+              src={imageUrl}
+              alt={timer.subType || "Unknown"}
               fill
               className="object-contain"
               sizes="32px"

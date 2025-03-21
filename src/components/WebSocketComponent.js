@@ -11,6 +11,7 @@ export default function WebSocketComponent() {
   const [gameTime, setGameTime] = useState(0);
   const [baronTimer, setBaronTimer] = useState(null);
   const [dragonTimer, setDragonTimer] = useState(null);
+  const [atakhanTimer, setAtakhanTimer] = useState(null);
   const [scoreboard, setScoreboard] = useState([]);
   const [players, setPlayers] = useState([]);
 
@@ -22,6 +23,7 @@ export default function WebSocketComponent() {
         setGameTime(parsedData.gameTime);
         setBaronTimer(parsedData.baronTimer);
         setDragonTimer(parsedData.dragonTimer);
+        setAtakhanTimer(parsedData.atakhanTimer);
         setScoreboard(parsedData.scoreboard);
         setPlayers(parsedData.players);
       }
@@ -52,6 +54,7 @@ export default function WebSocketComponent() {
       {/* Hiển thị thời gian Baron và Dragon */}
       {baronTimer && <TimerDisplay timer={baronTimer} title="Baron Pit Timer" />}
       {dragonTimer && <TimerDisplay timer={dragonTimer} title="Dragon Pit Timer" />}
+      {atakhanTimer && <TimerDisplay timer={atakhanTimer} title="Atakhan Timer" />}
     </div>
   );
 }

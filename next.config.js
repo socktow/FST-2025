@@ -2,20 +2,14 @@
 const nextConfig = {
   devIndicators: false,
   images: {
-    domains: ['patchwiki.biligame.com', 'cdn.discordapp.com'],
+    domains: ['localhost', 'cdn.discordapp.com'],
     remotePatterns: [
       {
         protocol: 'http',
         hostname: 'localhost',
         port: '58869',
         pathname: '/cache/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'patchwiki.biligame.com',
-        port: '',
-        pathname: '/images/**',
-      },
+      },      
       {
         protocol: 'https',
         hostname: 'cdn.discordapp.com',
@@ -25,4 +19,4 @@ const nextConfig = {
   },
 }
 
-module.exports = nextConfig 
+module.exports = nextConfig;
