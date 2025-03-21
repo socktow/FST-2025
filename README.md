@@ -1,15 +1,23 @@
 
 ## TimeLine
+#### Time
+| Type Info | Status     | Update                |
+| :-------- | :------- | :------------------------- |
+| `Dragon` | `📌` | x |
+| `Baron` | `📌` | x|
+| `Atakhan` | `📌` | x|
+| `Herald` | `📌` | x|
+| `Game Time` | `📌` | {gameTime}|
 
 #### ScoreBoard
 
 | Type Info | Status     | Update                |
 | :-------- | :------- | :------------------------- |
-| `Team Name` | `📌` | x |
-| `Team Logo` | `📌` | x|
-| `Team Kill` | `📌` | x |
-| `Team Gold` | `📌` | x |
-| `Team Turret` | `📌` | x |
+| `Team Name` | `📌` | {teamData.team2.name} / {teamData.team1.name} |
+| `Team Logo` | `📌` |  {teamData.team2.logo} / {teamData.team1.logo}|
+| `Team Kill` | `📌` | {team.kills} |
+| `Team Gold` | `📌` | {team.gold} |
+| `Team Turret` | `📌` | {team.towers} |
 | `Team Dragon` | `✖️` | x|
 | `Team Herald` | `✖️` | x|
 | `Team KillPoint` | `✖️` | x|
