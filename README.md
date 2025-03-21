@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## TimeLine
+#### Time
+| Type Info | Status     | Update                |
+| :-------- | :------- | :------------------------- |
+| `Dragon` | `📌` | x |
+| `Baron` | `📌` | x|
+| `Atakhan` | `📌` | x|
+| `Herald` | `📌` | x|
+| `Game Time` | `📌` | {gameTime}|
 
-First, run the development server:
+#### ScoreBoard
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+| Type Info | Status     | Update                |
+| :-------- | :------- | :------------------------- |
+| `Team Name` | `📌` | {teamData.team2.name} / {teamData.team1.name} |
+| `Team Logo` | `📌` |  {teamData.team2.logo} / {teamData.team1.logo}|
+| `Team Kill` | `📌` | {team.kills} |
+| `Team Gold` | `📌` | {team.gold} |
+| `Team Turret` | `📌` | {team.towers} |
+| `Team Dragon` | `✖️` | x|
+| `Team Herald` | `✖️` | x|
+| `Team KillPoint` | `✖️` | x|
+| `Dragon Status` | `✖️` | x|
+| `Team Point` | `✖️` | x|
+| `Baron/Dragon Power Play` | `✖️` | x|
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### Status Info
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+| Type Info | Status     | Update                |
+| :-------- | :------- | :------------------------- |
+| `Player Name` | `✖️` | x|
+| `Player Champion` | `✖️` | x|
+| `Player Level` | `✖️` | x|
+| `Player Rune` | `✖️` | x|
+| `Heal / Mana / Xp` | `✖️` | x|
+| `Ultimate` | `✖️` | x|
+| `Spell` | `✖️` | x|
+| `Score KDA` | `✖️` | x|
+| `Farm CS` | `✖️` | x|
+| `Item 0-5` | `✖️` | x|
+| `Item 6` | `✖️` | x|
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 21.03.2025 - Last Update
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
