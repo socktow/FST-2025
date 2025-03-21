@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   devIndicators: false,
-  images: { 
+  images: {
+    domains: ['patchwiki.biligame.com', 'cdn.discordapp.com'],
     remotePatterns: [
       {
         protocol: 'http',
@@ -15,6 +16,11 @@ const nextConfig = {
         port: '',
         pathname: '/images/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'cdn.discordapp.com',
+        pathname: '/attachments/**',
+      }
     ],
   },
 }

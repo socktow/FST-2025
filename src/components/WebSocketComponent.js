@@ -47,11 +47,11 @@ export default function WebSocketComponent() {
       {/* <PlayerList players={players} /> */}
 
       {/* Hiển thị bảng điểm số */}
-      <Scoreboard scoreboard={scoreboard} />
+      {/* <Scoreboard scoreboard={scoreboard} /> */}
 
       {/* Hiển thị thời gian Baron và Dragon */}
-      {/* {baronTimer && <TimerDisplay timer={baronTimer} title="Baron Pit Timer" />}
-      {dragonTimer && <TimerDisplay timer={dragonTimer} title="Dragon Pit Timer" />} */}
+      {baronTimer && <TimerDisplay timer={baronTimer} title="Baron Pit Timer" />}
+      {dragonTimer && <TimerDisplay timer={dragonTimer} title="Dragon Pit Timer" />}
     </div>
   );
 }

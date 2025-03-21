@@ -8,16 +8,17 @@ export function parseGameData(data) {
     // 📌 Lấy thời gian của game
     const gameTime = convertTime(data.state?.gameTime || 0);
 
-    // 📌 Lấy thông tin thời gian hồi Baron
-    const baronTimer = {
-      subType: data.state?.baronPitTimer?.subType || "Unknown",
-      timeLeft: data.state?.baronPitTimer?.timeLeft || 0,
-    };
+    // 📌 Lấy thông tin thời gian hồi Baron và format thành mm:ss
+    const baronTimer = data.state?.baronPitTimer ? {
+      subType: data.state.baronPitTimer.subType || "Unknown",
+      timeLeft: convertTime(data.state.baronPitTimer.timeLeft)
+    } : null;
 
-    const dragonTimer = {
-      subType: data.state?.dragonPitTimer?.subType || "Unknown",
-      timeLeft: data.state?.dragonPitTimer?.timeLeft || 0,
-    };
+    // 📌 Lấy thông tin thời gian hồi Dragon và format thành mm:ss
+    const dragonTimer = data.state?.dragonPitTimer ? {
+      subType: data.state.dragonPitTimer.subType || "Unknown",
+      timeLeft: convertTime(data.state.dragonPitTimer.timeLeft)
+    } : null;
 
     // 📌 Lấy thông tin scoreboard của 2 đội
     const scoreboard =

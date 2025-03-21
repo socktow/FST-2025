@@ -3,11 +3,14 @@ import { useEffect, useState } from "react";
 import { connectWebSocket, disconnectWebSocket } from "@/lib/websocket";
 import { parseGameData } from "@/lib/dataParser";
 import Scoreboard from "./Scoreboard";
+import Timer from "./Timer";
 
 export default function InGame() {
   const [scoreboard, setScoreboard] = useState([]);
   const [gameTime, setGameTime] = useState(0);
   const [teamData, setTeamData] = useState(null);
+  const [baronTimer, setBaronTimer] = useState(null);
+  const [dragonTimer, setDragonTimer] = useState(null);
 
   // Fetch team data
   useEffect(() => {
@@ -30,6 +33,8 @@ export default function InGame() {
       if (parsedData) {
         setScoreboard(parsedData.scoreboard);
         setGameTime(parsedData.gameTime);
+        setBaronTimer(parsedData.baronTimer);
+        setDragonTimer(parsedData.dragonTimer);
       }
     });
 
@@ -37,7 +42,7 @@ export default function InGame() {
   }, []);
 
   return (
-    <div className="min-h-screen ">
+    <div className="min-h-screen">
       <div className="absolute top-0 left-0 p-4">
         <Scoreboard 
           scoreboard={scoreboard} 
@@ -45,6 +50,10 @@ export default function InGame() {
           teamData={teamData}
         />
       </div>
+      <Timer 
+        baronTimer={baronTimer}
+        dragonTimer={dragonTimer}
+      />
     </div>
   );
 }

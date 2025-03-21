@@ -64,8 +64,8 @@ export async function PATCH(req) {
 export async function GET() {
     if (!matchData) {
         matchData = {
-            team1: { name: "Chưa có tên", logo: "" },
-            team2: { name: "Chưa có tên", logo: "" },
+            team1: { name: "GAM", logo: "" },
+            team2: { name: "TS", logo: "" },
             players: { red: [], blue: [] },
             createdAt: new Date(),
         };
