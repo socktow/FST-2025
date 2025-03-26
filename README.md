@@ -3,11 +3,11 @@
 #### Time
 | Type Info | Status     | Update                |
 | :-------- | :------- | :------------------------- |
-| `Dragon` | `📌` | x |
-| `Baron` | `📌` | x|
-| `Atakhan` | `📌` | x|
-| `Herald` | `📌` | x|
-| `Game Time` | `📌` | {gameTime}|
+| `Dragon` | `📌` | {dragonTimer} |
+| `Baron` | `📌` | {baronTimer} |
+| `Atakhan` | `📌` | {atakhanTimer} |
+| `Herald` | `📌` | {baronTimer} |
+| `Game Time` | `📌` | {gameTime} |
 
 #### ScoreBoard
 
