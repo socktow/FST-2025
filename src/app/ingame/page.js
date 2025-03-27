@@ -4,6 +4,7 @@ import { connectWebSocket, disconnectWebSocket } from "@/lib/websocket";
 import { parseGameData } from "@/lib/dataParser";
 import Scoreboard from "./Scoreboard";
 import Timer from "./Timer";
+import Scoreboardbottom from "./Scoreboardbottom";
 
 export default function InGame() {
   const [scoreboard, setScoreboard] = useState([]);
@@ -42,7 +43,7 @@ export default function InGame() {
   }, []);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
       <div className="absolute top-0 left-0 p-4">
         <Scoreboard 
           scoreboard={scoreboard} 
@@ -54,6 +55,9 @@ export default function InGame() {
         baronTimer={baronTimer}
         dragonTimer={dragonTimer}
       />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full">
+        <Scoreboardbottom />
+      </div>
     </div>
   );
 }

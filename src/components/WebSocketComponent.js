@@ -14,7 +14,7 @@ export default function WebSocketComponent() {
   const [atakhanTimer, setAtakhanTimer] = useState(null);
   const [scoreboard, setScoreboard] = useState([]);
   const [players, setPlayers] = useState([]);
-
+  const [playersdata, setPlayersdata] = useState([]);
   useEffect(() => {
     connectWebSocket((rawData) => {
       const parsedData = parseGameData(rawData);
@@ -26,6 +26,7 @@ export default function WebSocketComponent() {
         setAtakhanTimer(parsedData.atakhanTimer);
         setScoreboard(parsedData.scoreboard);
         setPlayers(parsedData.players);
+        setPlayersdata(parsedData.playersdata);
       }
     });
 
@@ -39,22 +40,19 @@ export default function WebSocketComponent() {
         Status: <span className="text-green-400">{gameStatus}</span>
       </p>
       <p className="mt-2">
-        Time:{" "}
-        <span className="text-yellow-400">
-          {gameTime}
-        </span>{" "}
+        Time: <span className="text-yellow-400">{gameTime}</span>{" "}
       </p>
 
       {/* Hiển thị danh sách người chơi */}
-      {/* <PlayerList players={players} /> */}
+      <PlayerList players={players} playersdata={playersdata} />
 
       {/* Hiển thị bảng điểm số */}
       {/* <Scoreboard scoreboard={scoreboard} /> */}
 
       {/* Hiển thị thời gian Baron và Dragon */}
-      {baronTimer && <TimerDisplay timer={baronTimer} title="Baron Pit Timer" />}
+      {/* {baronTimer && <TimerDisplay timer={baronTimer} title="Baron Pit Timer" />}
       {dragonTimer && <TimerDisplay timer={dragonTimer} title="Dragon Pit Timer" />}
-      {atakhanTimer && <TimerDisplay timer={atakhanTimer} title="Atakhan Timer" />}
+      {atakhanTimer && <TimerDisplay timer={atakhanTimer} title="Atakhan Timer" />} */}
     </div>
   );
 }

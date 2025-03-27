@@ -52,7 +52,26 @@ export function parseGameData(data) {
           mana: `${p.resource?.current || 0}/${p.resource?.max || 0}`,
         }))
       ) || [];
-
+      
+      const playersdata = (data.state?.scoreboardBottom?.teams || [])
+      .map((team) =>
+        (team.players || []).map((player) => ({
+          name: player.name || "Unknown",
+          champion: player.champion?.name || "Unknown",
+          totalGold: Math.round(player.totalGold) || 0,
+          deaths: player.deaths || 0,
+          kills: player.kills || 0,
+          assists: player.assists || 0,
+          creepScore: player.creepScore || 0,
+          visionScore: Math.round(player.visionScore) || 0,
+          level: player.level || 0,
+          gold: Math.round(player.gold) || 0,
+          shutdown: Math.round(player.shutdown) || 0,
+          respawnTimeRemaining: player.respawnTimeRemaining ?? "Alive"
+        }))
+      )
+      .flat();
+    
     return {
       gameStatus,
       gameTime,
@@ -61,6 +80,7 @@ export function parseGameData(data) {
       atakhanTimer,
       scoreboard,
       players,
+      playersdata
     };
   }
   return null;
