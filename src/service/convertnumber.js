@@ -23,3 +23,12 @@ export const convertTime = (time) => {
 export const convertToK = (number) => {
   return `${(number / 1000).toFixed(1)}k`;
 };
+
+/**
+ * Làm tròn số về số nguyên
+ * @param {number} number - Số cần làm tròn
+ * @returns {number} Số nguyên đã làm tròn
+ */
+export const convertToInt = (number) => {
+  return Math.floor(Number(number));
+};

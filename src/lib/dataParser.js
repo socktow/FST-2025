@@ -1,4 +1,4 @@
-import { convertTime } from "@/service/convertnumber";
+import { convertTime, convertToInt } from "@/service/convertnumber";
 
 export function parseGameData(data) {
   if (data.type === "ingame-state-update") {
@@ -48,12 +48,16 @@ export function parseGameData(data) {
         tab.players.map((p) => ({
           playerName: p.playerName,
           champion: p.championAssets?.name || "Unknown",
-          health: `${p.health?.current || 0}/${p.health?.max || 0}`,
-          mana: `${p.resource?.current || 0}/${p.resource?.max || 0}`,
+          health: `${convertToInt(p.health?.current)}/${convertToInt(
+            p.health?.max
+          )}`,
+          mana: `${convertToInt(p.resource?.current)}/${convertToInt(
+            p.resource?.max
+          )}`,
         }))
       ) || [];
-      
-      const playersdata = (data.state?.scoreboardBottom?.teams || [])
+
+    const playersdata = (data.state?.scoreboardBottom?.teams || [])
       .map((team) =>
         (team.players || []).map((player) => ({
           name: player.name || "Unknown",
@@ -67,11 +71,13 @@ export function parseGameData(data) {
           level: player.level || 0,
           gold: Math.round(player.gold) || 0,
           shutdown: Math.round(player.shutdown) || 0,
-          respawnTimeRemaining: player.respawnTimeRemaining ?? "Alive"
+          respawnTimeRemaining: player.respawnTimeRemaining
+            ? convertToInt(player.respawnTimeRemaining)
+            : "Alive",
         }))
       )
       .flat();
-    
+
     return {
       gameStatus,
       gameTime,
@@ -80,7 +86,7 @@ export function parseGameData(data) {
       atakhanTimer,
       scoreboard,
       players,
-      playersdata
+      playersdata,
     };
   }
   return null;
