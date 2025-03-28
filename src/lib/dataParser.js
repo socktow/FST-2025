@@ -74,6 +74,15 @@ export function parseGameData(data) {
           respawnTimeRemaining: player.respawnTimeRemaining
             ? convertToInt(player.respawnTimeRemaining)
             : "Alive",
+          items: (player.items || []).map(item => ({
+            asset: item.asset || "",
+            cooldown: item.cooldown || 0,
+            displayName: item.displayName || "",
+            count: item.count || 0,
+            stacks: item.stacks || 0,
+            id: item.id || 0,
+            visionScore: item.visionScore || 0
+          }))
         }))
       )
       .flat();
