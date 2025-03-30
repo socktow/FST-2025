@@ -76,11 +76,15 @@ export function parseGameData(data) {
             : "Alive",
           items: (player.items || []).map(item => ({
             asset: item.asset || "",
+            combineCost: item.combineCost || 0,
             cooldown: item.cooldown || 0,
-            displayName: item.displayName || "",
+            cost: item.cost || 0,
             count: item.count || 0,
-            stacks: item.stacks || 0,
+            displayName: item.displayName || "",
             id: item.id || 0,
+            maxCooldown: item.maxCooldown || 0,
+            modifier: item.modifier || 0,
+            stacks: item.stacks || 0,
             visionScore: item.visionScore || 0
           }))
         }))
