@@ -47,8 +47,11 @@ const PlayerList = ({ players, playersdata = [] }) => {
               </button>
               {expandedItems[index] && (
                 <div className="flex flex-wrap gap-2 mt-2">
-                  {playerData.items?.map((item, itemIndex) => (
-                    <div key={itemIndex} className="relative w-12 h-12">
+                  {(index < 5 ? [...playerData.items].reverse() : playerData.items)?.map((item, itemIndex) => (
+                    <div 
+                      key={itemIndex} 
+                      className="relative w-12 h-12 border-2 border-gray-600 rounded-md"
+                    >
                       <Image
                         src={`http://localhost:58869/${item.asset}`}
                         alt={item.displayName}
