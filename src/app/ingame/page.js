@@ -12,6 +12,8 @@ export default function InGame() {
   const [teamData, setTeamData] = useState(null);
   const [baronTimer, setBaronTimer] = useState(null);
   const [dragonTimer, setDragonTimer] = useState(null);
+  const [playersdata, setPlayersdata] = useState([]);
+  const [players, setPlayers] = useState([]);
 
   // Fetch team data
   useEffect(() => {
@@ -36,6 +38,8 @@ export default function InGame() {
         setGameTime(parsedData.gameTime);
         setBaronTimer(parsedData.baronTimer);
         setDragonTimer(parsedData.dragonTimer);
+        setPlayersdata(parsedData.playersdata);
+        setPlayers(parsedData.players);
       }
     });
 
@@ -56,7 +60,7 @@ export default function InGame() {
         dragonTimer={dragonTimer}
       />
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full">
-        <Scoreboardbottom />
+        <Scoreboardbottom playersdata={playersdata} players={players} />
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
-import { sortPlayerItems, getItemStacks, getCooldownPercentage } from '../service/itemService';
+import { sortPlayerItems, getItemStacks } from '../service/itemService';
 
 const PlayerList = ({ players, playersdata = [] }) => {
   const [expandedItems, setExpandedItems] = useState({});

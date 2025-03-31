@@ -47,7 +47,15 @@ export function parseGameData(data) {
       data.state?.tabs?.flatMap((tab) =>
         tab.players.map((p) => ({
           playerName: p.playerName,
+          level: p.level || 1,
+          hasBaron: p.hasBaron || false,
+          hasDragon: p.hasDragon || false,
           champion: p.championAssets?.name || "Unknown",
+          championInfo: {
+            alias: p.championAssets?.alias || "Unknown",
+            splash: p.championAssets?.splashImg || "",
+            square: p.championAssets?.squareImg || ""
+          },
           health: `${convertToInt(p.health?.current)}/${convertToInt(
             p.health?.max
           )}`,
