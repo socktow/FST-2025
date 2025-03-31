@@ -1,7 +1,7 @@
-export default function PlayerName({ playerName, isBlueTeam = false }) {
+export default function PlayerName({ name, isDead }) {
   return (
-    <div className={`text-white text-sm ${isBlueTeam ? 'text-right' : 'text-left'}`}>
-      {playerName}
+    <div className="text-white text-sm font-semibold" style={{ filter: isDead ? "grayscale(100%)" : "none" }}>
+      {name}
     </div>
   );
 } 

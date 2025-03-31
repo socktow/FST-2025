@@ -56,6 +56,13 @@ export function parseGameData(data) {
 
           const runeStyles = getRuneStyles(perks);
 
+          // Extract abilities information
+          const abilities = p.abilities ? {
+            ultimate: p.abilities.find(a => a.slot === "R") || null,
+            spell1: p.abilities.find(a => a.slot === "D") || null,
+            spell2: p.abilities.find(a => a.slot === "F") || null
+          } : null;
+
           return {
             playerName: p.playerName,
             level: p.level || 1,
@@ -75,6 +82,26 @@ export function parseGameData(data) {
             )}`,
             perks,
             runeStyles,
+            abilities: abilities ? {
+              ultimate: abilities.ultimate ? {
+                iconPath: abilities.ultimate.assets.iconAsset,
+                cooldown: abilities.ultimate.cooldown,
+                totalCooldown: abilities.ultimate.totalCooldown,
+                level: abilities.ultimate.level
+              } : null,
+              spell1: abilities.spell1 ? {
+                iconPath: abilities.spell1.assets.iconAsset,
+                cooldown: abilities.spell1.cooldown,
+                totalCooldown: abilities.spell1.totalCooldown,
+                level: abilities.spell1.level
+              } : null,
+              spell2: abilities.spell2 ? {
+                iconPath: abilities.spell2.assets.iconAsset,
+                cooldown: abilities.spell2.cooldown,
+                totalCooldown: abilities.spell2.totalCooldown,
+                level: abilities.spell2.level
+              } : null
+            } : null
           };
         })
       ) || [];
