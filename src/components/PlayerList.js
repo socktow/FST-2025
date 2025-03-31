@@ -85,22 +85,22 @@ const PlayerList = ({ players, playersdata = [] }) => {
                         }}
                         className="relative w-12 h-12 border-2 border-gray-600 rounded-md"
                       >
-                        <Image
-                          src={`http://localhost:58869/${item.asset}`}
-                          alt={item.displayName}
-                          fill
-                          className="object-contain"
-                          sizes="48px"
+                      <Image
+                        src={`http://localhost:58869/${item.asset}`}
+                        alt={item.displayName}
+                        fill
+                        className="object-contain"
+                        sizes="48px"
                           onError={(e) => {
                             e.target.style.display = 'none';
                           }}
-                        />
+                      />
                         {stacks !== null && (
                           <div className="absolute bottom-0 right-0 bg-black bg-opacity-25 text-white text-xs rounded-bl px-1">
                             {stacks}
                           </div>
                         )}
-                      </div>
+                    </div>
                     );
                   })}
                 </div>

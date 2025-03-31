@@ -1,4 +1,5 @@
 import { convertTime, convertToInt } from "@/service/convertnumber";
+import { getRuneStyles } from "@/service/runeService";
 
 export function parseGameData(data) {
   if (data.type === "ingame-state-update") {
@@ -45,24 +46,37 @@ export function parseGameData(data) {
     // 📌 Lấy danh sách tên và squareImg của 10 người chơi
     const players =
       data.state?.tabs?.flatMap((tab) =>
-        tab.players.map((p) => ({
-          playerName: p.playerName,
-          level: p.level || 1,
-          hasBaron: p.hasBaron || false,
-          hasDragon: p.hasDragon || false,
-          champion: p.championAssets?.name || "Unknown",
-          championInfo: {
-            alias: p.championAssets?.alias || "Unknown",
-            splash: p.championAssets?.splashImg || "",
-            square: p.championAssets?.squareImg || ""
-          },
-          health: `${convertToInt(p.health?.current)}/${convertToInt(
-            p.health?.max
-          )}`,
-          mana: `${convertToInt(p.resource?.current)}/${convertToInt(
-            p.resource?.max
-          )}`,
-        }))
+        tab.players.map((p) => {
+          const perks = p.perks
+            ? p.perks.map((perk) => ({
+                id: perk.id,
+                iconPath: perk.iconPath,
+              }))
+            : [];
+
+          const runeStyles = getRuneStyles(perks);
+
+          return {
+            playerName: p.playerName,
+            level: p.level || 1,
+            hasBaron: p.hasBaron || false,
+            hasDragon: p.hasDragon || false,
+            champion: p.championAssets?.name || "Unknown",
+            championInfo: {
+              alias: p.championAssets?.alias || "Unknown",
+              splash: p.championAssets?.splashImg || "",
+              square: p.championAssets?.squareImg || "",
+            },
+            health: `${convertToInt(p.health?.current)}/${convertToInt(
+              p.health?.max
+            )}`,
+            mana: `${convertToInt(p.resource?.current)}/${convertToInt(
+              p.resource?.max
+            )}`,
+            perks,
+            runeStyles,
+          };
+        })
       ) || [];
 
     const playersdata = (data.state?.scoreboardBottom?.teams || [])
@@ -82,7 +96,7 @@ export function parseGameData(data) {
           respawnTimeRemaining: player.respawnTimeRemaining
             ? convertToInt(player.respawnTimeRemaining)
             : "Alive",
-          items: (player.items || []).map(item => ({
+          items: (player.items || []).map((item) => ({
             asset: item.asset || "",
             combineCost: item.combineCost || 0,
             cooldown: item.cooldown || 0,
@@ -93,8 +107,8 @@ export function parseGameData(data) {
             maxCooldown: item.maxCooldown || 0,
             modifier: item.modifier || 0,
             stacks: item.stacks || 0,
-            visionScore: item.visionScore || 0
-          }))
+            visionScore: item.visionScore || 0,
+          })),
         }))
       )
       .flat();
