@@ -3,8 +3,8 @@ import Image from "next/image";
 export default function PerkIcon({ perk, level, isDead }) {
   return (
     <>
-      <div className="w-6 h-6 bg-gray-800/50 rounded">
-        <div className="w-6 h-6 bg-gray-800/50 rounded relative">
+      <div className="w-6 h-6 ">
+        <div className="w-6 h-6 rounded relative">
           {perk?.iconPath && (
             <Image
               src={`http://localhost:58869/${perk.iconPath}`}

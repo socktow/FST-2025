@@ -6,7 +6,98 @@ import GoldDiff from "../../components/Scoreboard/GoldDiff";
 import AbilityIcon from "../../components/Scoreboard/AbilityIcon";
 import PerkIcon from "../../components/Scoreboard/PerkIcon";
 import PlayerName from "../../components/Scoreboard/PlayerName";
-import PlayerKDA from "../../components/Scoreboard/PlayerKDA";
+import PlayerKDA from "@/components/Scoreboard/PlayerKDA";
+
+// PlayerAbilities component
+const PlayerAbilities = ({ abilities, isDead, isBlueTeam }) => {
+  // Order abilities based on team
+  const abilityOrder = isBlueTeam
+    ? [abilities?.spell1, abilities?.spell2, abilities?.ultimate]
+    : [abilities?.ultimate, abilities?.spell1, abilities?.spell2];
+
+  return (
+    <div className="flex flex-row gap-1 relative">
+      {abilityOrder.map((ability, idx) => (
+        <AbilityIcon key={idx} ability={ability} isDead={isDead} />
+      ))}
+    </div>
+  );
+};
+
+// PlayerInfo component
+const PlayerInfo = ({ player, playerData, isBlueTeam }) => {
+  const isDead = playerData?.respawnTimeRemaining > 0;
+
+  return (
+    <div
+      className="flex flex-col gap-1 relative"
+      style={{
+        alignItems: isBlueTeam ? "flex-end" : "flex-start",
+      }}
+    >
+      <div className="flex items-center gap-2">
+        {isBlueTeam ? (
+          <>
+            <PlayerKDA
+              kills={playerData?.kills || 0}
+              deaths={playerData?.deaths || 0}
+              assists={playerData?.assists || 0}
+            />
+            <PlayerName name={player.playerName} isDead={isDead} />
+          </>
+        ) : (
+          <>
+            <PlayerName name={player.playerName} isDead={isDead} />
+            <PlayerKDA
+              kills={playerData?.kills || 0}
+              deaths={playerData?.deaths || 0}
+              assists={playerData?.assists || 0}
+            />
+          </>
+        )}
+      </div>
+      <div className="flex items-center gap-2">
+        {isBlueTeam ? (
+          <>
+            <PlayerAbilities
+              abilities={player.abilities}
+              isDead={isDead}
+              isBlueTeam={isBlueTeam}
+            />
+            <ResourceBars
+              player={player}
+              isDead={isDead}
+              isReversed={isBlueTeam}
+            />
+            <PerkIcon
+              perk={player.perks[0]}
+              level={player.level}
+              isDead={isDead}
+            />
+          </>
+        ) : (
+          <>
+            <PerkIcon
+              perk={player.perks[0]}
+              level={player.level}
+              isDead={isDead}
+            />
+            <ResourceBars
+              player={player}
+              isDead={isDead}
+              isReversed={isBlueTeam}
+            />
+            <PlayerAbilities
+              abilities={player.abilities}
+              isDead={isDead}
+              isBlueTeam={isBlueTeam}
+            />
+          </>
+        )}
+      </div>
+    </div>
+  );
+};
 
 export default function Scoreboardbottom({ playersdata = [], players = [] }) {
   const { blueTeam, redTeam, blueTeamData, redTeamData } = splitTeams(
@@ -22,17 +113,6 @@ export default function Scoreboardbottom({ playersdata = [], players = [] }) {
   const renderPlayer = (player, playerData, isBlueTeam) => {
     const isDead = playerData?.respawnTimeRemaining > 0;
     const playerStyle = { filter: isDead ? "grayscale(100%)" : "none" };
-    const abilityOrder = isBlueTeam
-      ? [
-          player.abilities?.spell1,
-          player.abilities?.spell2,
-          player.abilities?.ultimate,
-        ]
-      : [
-          player.abilities?.ultimate,
-          player.abilities?.spell1,
-          player.abilities?.spell2,
-        ];
 
     return (
       <div
@@ -43,31 +123,11 @@ export default function Scoreboardbottom({ playersdata = [], players = [] }) {
         style={playerStyle}
       >
         {isBlueTeam && (
-          <div className="flex flex-col items-end gap-1">
-            <div className="flex items-center gap-2">
-              <PlayerName name={player.playerName} isDead={isDead} />
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="flex flex-row gap-1 relative">
-                <PlayerKDA
-                  kills={playerData?.kills || 0}
-                  deaths={playerData?.deaths || 0}
-                  assists={playerData?.assists || 0}
-                  creepScore={playerData?.creepScore || 0}
-                />
-                {abilityOrder.map((ability, idx) => (
-                  <AbilityIcon key={idx} ability={ability} isDead={isDead} />
-                ))}
-              </div>
-
-              <ResourceBars player={player} isDead={isDead} isReversed={true} />
-              <PerkIcon
-                perk={player.perks[0]}
-                level={player.level}
-                isDead={isDead}
-              />
-            </div>
-          </div>
+          <PlayerInfo
+            player={player}
+            playerData={playerData}
+            isBlueTeam={isBlueTeam}
+          />
         )}
         <ChampionSquare
           player={player}
@@ -76,30 +136,11 @@ export default function Scoreboardbottom({ playersdata = [], players = [] }) {
           isDead={isDead}
         />
         {!isBlueTeam && (
-          <div className="flex flex-col gap-1">
-            <div className="flex items-center gap-2">
-              <PlayerName name={player.playerName} isDead={isDead} />
-            </div>
-            <div className="flex items-center gap-2">
-              <PerkIcon
-                perk={player.perks[0]}
-                level={player.level}
-                isDead={isDead}
-              />
-              <ResourceBars player={player} isDead={isDead} />
-              <div className="flex flex-row gap-1">
-                {abilityOrder.map((ability, idx) => (
-                  <AbilityIcon key={idx} ability={ability} isDead={isDead} />
-                ))}
-              </div>
-            <PlayerKDA
-              kills={playerData?.kills || 0}
-              deaths={playerData?.deaths || 0}
-              assists={playerData?.assists || 0}
-              creepScore={playerData?.creepScore || 0}
-            />
-            </div>
-          </div>
+          <PlayerInfo
+            player={player}
+            playerData={playerData}
+            isBlueTeam={isBlueTeam}
+          />
         )}
       </div>
     );
