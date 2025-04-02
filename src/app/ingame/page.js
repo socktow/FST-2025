@@ -15,21 +15,6 @@ export default function InGame() {
   const [playersdata, setPlayersdata] = useState([]);
   const [players, setPlayers] = useState([]);
 
-  // Fetch team data
-  useEffect(() => {
-    const fetchTeamData = async () => {
-      try {
-        const response = await fetch('/api/dashboard');
-        const data = await response.json();
-        setTeamData(data.matchData);
-      } catch (error) {
-        console.error('Error fetching team data:', error);
-      }
-    };
-
-    fetchTeamData();
-  }, []);
-
   useEffect(() => {
     connectWebSocket((rawData) => {
       const parsedData = parseGameData(rawData);

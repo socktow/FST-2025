@@ -6,7 +6,8 @@ import GoldDiff from "../../components/Scoreboard/GoldDiff";
 import AbilityIcon from "../../components/Scoreboard/AbilityIcon";
 import PerkIcon from "../../components/Scoreboard/PerkIcon";
 import PlayerName from "../../components/Scoreboard/PlayerName";
-import PlayerKDA from "@/components/Scoreboard/PlayerKDA";
+import PlayerKDA from "../../components/Scoreboard/PlayerKDA";
+import PlayerItems from "../../components/Scoreboard/PlayerItems";
 
 // PlayerAbilities component
 const PlayerAbilities = ({ abilities, isDead, isBlueTeam }) => {
@@ -30,40 +31,36 @@ const PlayerInfo = ({ player, playerData, isBlueTeam }) => {
 
   return (
     <div
-      className="flex flex-col gap-1 relative"
+      className="flex flex-col gap-1"
       style={{
         alignItems: isBlueTeam ? "flex-end" : "flex-start",
       }}
     >
       <div className="flex items-center gap-2">
-        {isBlueTeam ? (
-          <>
-            <PlayerKDA
-              kills={playerData?.kills || 0}
-              deaths={playerData?.deaths || 0}
-              assists={playerData?.assists || 0}
-            />
-            <PlayerName name={player.playerName} isDead={isDead} />
-          </>
-        ) : (
-          <>
-            <PlayerName name={player.playerName} isDead={isDead} />
-            <PlayerKDA
-              kills={playerData?.kills || 0}
-              deaths={playerData?.deaths || 0}
-              assists={playerData?.assists || 0}
-            />
-          </>
-        )}
+        <PlayerName name={player.playerName} isDead={isDead} />
       </div>
       <div className="flex items-center gap-2">
         {isBlueTeam ? (
           <>
-            <PlayerAbilities
-              abilities={player.abilities}
-              isDead={isDead}
-              isBlueTeam={isBlueTeam}
-            />
+            <div className="relative">
+              <PlayerKDA
+                kills={playerData?.kills}
+                deaths={playerData?.deaths}
+                assists={playerData?.assists}
+                creepScore={playerData?.creepScore}
+                position="left"
+              />
+              <PlayerItems
+                playerData={playerData}
+                isBlueTeam={isBlueTeam}
+                position="left"
+              />
+              <PlayerAbilities
+                abilities={player.abilities}
+                isDead={isDead}
+                isBlueTeam={isBlueTeam}
+              />
+            </div>
             <ResourceBars
               player={player}
               isDead={isDead}
@@ -87,11 +84,25 @@ const PlayerInfo = ({ player, playerData, isBlueTeam }) => {
               isDead={isDead}
               isReversed={isBlueTeam}
             />
-            <PlayerAbilities
-              abilities={player.abilities}
-              isDead={isDead}
-              isBlueTeam={isBlueTeam}
-            />
+            <div className="relative">
+              <PlayerAbilities
+                abilities={player.abilities}
+                isDead={isDead}
+                isBlueTeam={isBlueTeam}
+              />
+              <PlayerItems
+                playerData={playerData}
+                isBlueTeam={isBlueTeam}
+                position="right"
+              />
+              <PlayerKDA
+                kills={playerData?.kills}
+                deaths={playerData?.deaths}
+                assists={playerData?.assists}
+                creepScore={playerData?.creepScore}
+                position="right"
+              />
+            </div>
           </>
         )}
       </div>

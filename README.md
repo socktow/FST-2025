@@ -1,44 +1,50 @@
 # First Stand 2025
 
-A real-time League of Legends match display application built with Next.js, designed for tournament broadcasting and match analysis.
+A real-time League of Legends match display application built with Next.js, designed for tournament broadcasting and professional match analysis.
 
 ## Features
 
-### Timeline Display
-- Real-time objective timers (Dragon, Baron, Herald)
-- Game time tracking
-- Objective status indicators
-
-### Scoreboard
-- Team information display
-- Team statistics (Kills, Gold, Towers)
-- Dragon and Herald status
-- Baron/Dragon Power Play indicators
-
-### Player Information
-- Player names and champions
-- Level and experience tracking
-- Health and mana monitoring
-- Ultimate and spell cooldowns
-- KDA statistics
+### Scoreboard Display
+- Team information with complete player stats
+- Player champion display with health and mana monitoring
+- KDA (Kills/Deaths/Assists) tracking
 - CS (Creep Score) tracking
-- Item builds (0-6)
+- Gold difference indicators
+- Player items with automatic sorting and stack display
+- Ultimate and ability cooldown tracking
+- Summoner perk display
+- Team-based positioning (Blue/Red team layout)
+- Dead player status indicators
 
-## Library
+### Match Timeline
+- Real-time objective timers (Dragon, Baron, Herald, Atakhan)
+- Game time tracking with precision
+- Visual objective status indicators
+- Power play status display
 
-- **Next.js**: React framework for production
-- **Tailwind CSS**: Utility-first CSS framework
-- **React**: JavaScript library for building user interfaces
-- **Image Optimization**: Next.js built-in Image component
-- **ESLint**: Code linting and formatting
-- **PostCSS**: CSS processing and optimization
+### Player Details
+- Dynamic item builds with visual indicators for new items
+- Resource bars (health/mana/energy)
+- Ability icons with cooldown status
+- Champion-specific information
+- Gold acquisition tracking
+- Vision score monitoring
 
-## Install
+## Technology Stack
+
+- **Next.js**: React framework for server-rendered applications
+- **Tailwind CSS**: Utility-first CSS framework for responsive design
+- **React**: JavaScript library for building interactive UIs
+- **Image Optimization**: Next.js Image component for optimized asset delivery
+- **ESLint**: Code quality and consistency enforcement
+- **PostCSS**: Advanced CSS processing
+
+## Installation
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/socktow/FST-2025.git
-cd FST-2025
+git clone https://github.com/socktow/FirstStand2025.git
+cd FirstStand2025
 ```
 
 2. Install dependencies:
@@ -46,7 +52,7 @@ cd FST-2025
 npm install
 ```
 
-## How to Start
+## Usage
 
 1. Start the development server:
 ```bash
@@ -55,9 +61,9 @@ npm run dev
 
 2. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-3. The application will automatically connect to the game client through the local endpoint.
+3. The application will automatically connect to the League of Legends client at the local endpoint.
 
-## Endpoint
+## Game Client Connection
 
 The application connects to the League of Legends game client through:
 ```
@@ -65,59 +71,62 @@ http://localhost:58869
 ```
 
 This endpoint provides real-time game data including:
-- Player information
-- Team statistics
-- Match timeline
-- Objective timers
-- Item updates
+- Player statistics and status
+- Team performance metrics
+- Match timeline events
+- Objective status and timers
+- Item purchase and upgrade tracking
 
-## How to Customize
+## Customization
 
-### Styling
-The application uses Tailwind CSS for styling. You can customize the appearance by:
-1. Modifying the Tailwind configuration in `tailwind.config.js`
-2. Adding custom CSS in the global styles
-3. Modifying component-specific styles
+### Visual Styling
+Modify the appearance using Tailwind CSS:
+- Edit `tailwind.config.js` for theme customization
+- Adjust component-specific styles in their respective files
+- Modify global styles in the global CSS file
 
-### Components
-Main components are located in `src/components/`:
-- `PlayerList.js`: Displays player information and items
-- `Timeline.js`: Shows match timeline and objectives
-- `ScoreBoard.js`: Displays team statistics
+### Component Structure
+Key component directories:
+- `src/components/Scoreboard/`: Player information display components
+  - `PlayerItems.js`: Item display with team-based positioning
+  - `PlayerKDA.js`: Kill/Death/Assist statistics 
+  - `ChampionSquare.js`: Champion portrait display
+  - `AbilityIcon.js`: Ability cooldown indicators
+  - `PerkIcon.js`: Summoner perk display
+  - `ResourceBars.js`: Health/mana visualization
+  - `PlayerName.js`: Player name display
+  - `GoldDiff.js`: Gold difference indicators
+- `src/app/ingame/`: In-game display layouts
+  - `Scoreboardbottom.js`: Bottom scoreboard implementation
+
+### Data Services
+Service modules in `src/service/`:
+- `itemService.js`: Item sorting and display logic
+- `goldService.js`: Gold calculation and comparison
+- `scoreboardService.js`: Team data organization
+
+## Development
+
+### Update Process
+Use the included `update.bat` script for Windows users to update the application.
 
 ### Data Structure
-Game data structure is defined in `src/service/`:
-- `itemService.js`: Handles item-related logic
-- `playerService.js`: Manages player data processing
-
-### Configuration Files
-- `next.config.js`: Next.js configuration
-- `postcss.config.mjs`: PostCSS configuration
-- `eslint.config.mjs`: ESLint configuration
-- `jsconfig.json`: JavaScript configuration
-
-## Development Tools
-
-### Update Script
-The project includes an `update.bat` script for Windows users to easily update the application.
-
-### Data Management
-- `data.json`: Contains game data structure and configurations
-- Real-time data processing and updates
+- Data parsing and processing handled in `src/lib/dataParser.js`
+- Component-specific data formatting in service modules
 
 ## Contact
 
 For support or inquiries:
 - Email: mjssdn95@gmail.com
 - GitHub: [socktow](https://github.com/socktow)
-- Repository: [FST-2025](https://github.com/socktow/FST-2025)
+- Repository: [FirstStand2025](https://github.com/socktow/FirstStand2025)
 
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Last Update
-21.03.2025
+April 2, 2024
 
 
 
