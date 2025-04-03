@@ -15,6 +15,7 @@ export default function WebSocketComponent() {
   const [scoreboard, setScoreboard] = useState([]);
   const [players, setPlayers] = useState([]);
   const [playersdata, setPlayersdata] = useState([]);
+  
   useEffect(() => {
     connectWebSocket((rawData) => {
       const parsedData = parseGameData(rawData);
