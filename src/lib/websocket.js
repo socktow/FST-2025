@@ -11,7 +11,7 @@ export function connectWebSocket(callback) {
   socket.onopen = () => console.log("✅ Connected to WebSocket");
 
   socket.onmessage = (event) => {
-    const data = event.data.trim(); // Loại bỏ khoảng trắng thừa
+    const data = event.data.trim();
     if (data === "KeepAlive") {
       console.log("🔄 Received KeepAlive, ignoring...");
       return;

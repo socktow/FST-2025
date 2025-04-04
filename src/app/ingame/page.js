@@ -40,10 +40,10 @@ export default function InGame() {
           teamData={teamData}
         />
       </div>
-      <Timer 
+      {/* <Timer 
         baronTimer={baronTimer}
         dragonTimer={dragonTimer}
-      />
+      /> */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full">
         <Scoreboardbottom playersdata={playersdata} players={players} />
       </div>

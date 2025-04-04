@@ -26,7 +26,7 @@ const PlayerAbilities = ({ abilities, isDead, isBlueTeam }) => {
 };
 
 // PlayerInfo component
-const PlayerInfo = ({ player, playerData, isBlueTeam }) => {
+const PlayerInfo = ({ player, playerData, isBlueTeam, index }) => {
   const isDead = playerData?.respawnTimeRemaining > 0;
 
   return (
@@ -37,7 +37,13 @@ const PlayerInfo = ({ player, playerData, isBlueTeam }) => {
       }}
     >
       <div className="flex items-center gap-2">
-        <PlayerName name={player.playerName} isDead={isDead} />
+        <PlayerName 
+          name={player.playerName}
+          shutdown={playerData.shutdown}
+          isDead={isDead} 
+          index={index}
+          isBlueTeam={isBlueTeam}
+        />
       </div>
       <div className="flex items-center gap-2">
         {isBlueTeam ? (
@@ -50,11 +56,11 @@ const PlayerInfo = ({ player, playerData, isBlueTeam }) => {
                 creepScore={playerData?.creepScore}
                 position="left"
               />
-              {/* <PlayerItems
+              <PlayerItems
                 playerData={playerData}
                 isBlueTeam={isBlueTeam}
                 position="left"
-              /> */}
+              />
               <PlayerAbilities
                 abilities={player.abilities}
                 isDead={isDead}
@@ -90,11 +96,11 @@ const PlayerInfo = ({ player, playerData, isBlueTeam }) => {
                 isDead={isDead}
                 isBlueTeam={isBlueTeam}
               />
-              {/* <PlayerItems
+              <PlayerItems
                 playerData={playerData}
                 isBlueTeam={isBlueTeam}
                 position="right"
-              /> */}
+              />
               <PlayerKDA
                 kills={playerData?.kills}
                 deaths={playerData?.deaths}
@@ -121,7 +127,7 @@ export default function Scoreboardbottom({ playersdata = [], players = [] }) {
     playersdata
   ).playerDiffs;
 
-  const renderPlayer = (player, playerData, isBlueTeam) => {
+  const renderPlayer = (player, playerData, isBlueTeam, index) => {
     const isDead = playerData?.respawnTimeRemaining > 0;
     const playerStyle = { filter: isDead ? "grayscale(100%)" : "none" };
 
@@ -138,6 +144,7 @@ export default function Scoreboardbottom({ playersdata = [], players = [] }) {
             player={player}
             playerData={playerData}
             isBlueTeam={isBlueTeam}
+            index={index}
           />
         )}
         <ChampionSquare
@@ -151,6 +158,7 @@ export default function Scoreboardbottom({ playersdata = [], players = [] }) {
             player={player}
             playerData={playerData}
             isBlueTeam={isBlueTeam}
+            index={index}
           />
         )}
       </div>
@@ -163,11 +171,12 @@ export default function Scoreboardbottom({ playersdata = [], players = [] }) {
         <div className="w-full h-full flex justify-between">
           <div className="w-full h-full bg-black-500/20">
             <div className="h-full flex flex-col justify-between py-1">
-              {blueTeam.map((player) =>
+              {blueTeam.map((player, index) =>
                 renderPlayer(
                   player,
                   playersdata.find((p) => p.champion === player.champion),
-                  true
+                  true,
+                  index
                 )
               )}
             </div>
@@ -181,11 +190,12 @@ export default function Scoreboardbottom({ playersdata = [], players = [] }) {
           </div>
           <div className="w-full h-full bg-black-500/20">
             <div className="h-full flex flex-col justify-between py-1">
-              {redTeam.map((player) =>
+              {redTeam.map((player, index) =>
                 renderPlayer(
                   player,
                   playersdata.find((p) => p.champion === player.champion),
-                  false
+                  false,
+                  index
                 )
               )}
             </div>
