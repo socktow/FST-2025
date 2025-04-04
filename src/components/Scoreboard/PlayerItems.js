@@ -47,7 +47,7 @@ export default function PlayerItems({ playerData, isBlueTeam, position = "left" 
                 />
                 {stacks !== null && (
                   <div className="absolute bottom-0 right-0 bg-black bg-opacity-50 text-white text-[8px] px-[2px]">
-                    {stacks}
+                    {/* {stacks} */}
                   </div>
                 )}
               </div>

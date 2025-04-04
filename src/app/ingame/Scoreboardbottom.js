@@ -50,11 +50,11 @@ const PlayerInfo = ({ player, playerData, isBlueTeam }) => {
                 creepScore={playerData?.creepScore}
                 position="left"
               />
-              <PlayerItems
+              {/* <PlayerItems
                 playerData={playerData}
                 isBlueTeam={isBlueTeam}
                 position="left"
-              />
+              /> */}
               <PlayerAbilities
                 abilities={player.abilities}
                 isDead={isDead}
@@ -90,11 +90,11 @@ const PlayerInfo = ({ player, playerData, isBlueTeam }) => {
                 isDead={isDead}
                 isBlueTeam={isBlueTeam}
               />
-              <PlayerItems
+              {/* <PlayerItems
                 playerData={playerData}
                 isBlueTeam={isBlueTeam}
                 position="right"
-              />
+              /> */}
               <PlayerKDA
                 kills={playerData?.kills}
                 deaths={playerData?.deaths}
