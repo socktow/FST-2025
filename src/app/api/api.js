@@ -71,3 +71,38 @@ export const teamConfigApi = {
     }
   }
 };
+
+export const imageApi = {
+  upload: async (file, name) => {
+    const formData = new FormData();
+    formData.append('image', file);
+    formData.append('name', name);
+
+    try {
+      const res = await fetch('/api/upload', {
+        method: 'POST',
+        body: formData,
+      });
+
+      const data = await res.json();
+      return data;
+    } catch (error) {
+      console.error('Failed to upload image:', error);
+      return null;
+    }
+  },
+
+  getAll: async () => {
+    try {
+      const res = await fetch('/api/upload');
+      if (!res.ok) {
+        throw new Error('Failed to fetch images');
+      }
+      const data = await res.json();
+      return data.images || [];
+    } catch (error) {
+      console.error('Failed to get images:', error);
+      return [];
+    }
+  }
+};

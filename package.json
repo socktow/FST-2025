@@ -9,8 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "formidable": "^3.5.2",
+    "fs": "^0.0.1-security",
     "lodash.debounce": "^4.0.8",
     "next": "15.2.2",
+    "path": "^0.12.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },

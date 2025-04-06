@@ -10,7 +10,7 @@ import goldIcon from "../../image/team/icon_gold.png";
 export default function Scoreboard({ gameTime = "00:00", scoreboard = [] }) {
   return (
     <div className="w-full h-full justify-center items-center">
-      <div className="w-[350px] h-[120px] bg-black rounded-lg">
+      <div className="w-[300px] h-[110px] bg-black rounded-lg">
         {/* Grid container */}
         <div className="w-full h-full grid grid-cols-4 grid-rows-3 py-1">
           {/* Row 1 - Headers */}
@@ -35,7 +35,7 @@ export default function Scoreboard({ gameTime = "00:00", scoreboard = [] }) {
               className="filter brightness-0 invert"
             />
           </div>
-          <div className="h-8 flex items-center justify-center mt-1.5">
+          <div className="h-8 flex items-center justify-center mt-3">
             <Image
               src={goldIcon}
               alt="Gold"
