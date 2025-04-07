@@ -68,6 +68,11 @@ export function parseGameData(data) {
             level: p.level || 1,
             hasBaron: p.hasBaron || false,
             hasDragon: p.hasDragon || false,
+            experience: {
+              previousLevel: p.experience?.previousLevel || 0,
+              current: p.experience?.current || 0,
+              nextLevel: p.experience?.nextLevel || 0
+            },
             champion: p.championAssets?.name || "Unknown",
             championInfo: {
               alias: p.championAssets?.alias || "Unknown",

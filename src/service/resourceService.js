@@ -5,7 +5,6 @@ export const NO_RESOURCE_CHAMPIONS = [
   "Riven",
   "Gnar",
   "Viego",
-  "Yone",
   "Yasuo",
   "Kled",
 ];
@@ -23,16 +22,27 @@ export const FURY_CHAMPIONS = [
 export const ENERGY_CHAMPIONS = ["Akali", "Zed", "Shen", "Kennen", "Lee Sin"];
 
 export const getResourceType = (championName) => {
-  if (NO_RESOURCE_CHAMPIONS.includes(championName)) {
-    return "none";
-  }
-  if (FURY_CHAMPIONS.includes(championName)) {
-    return "fury";
-  }
-  if (ENERGY_CHAMPIONS.includes(championName)) {
+  const energyChampions = [
+    "Lee Sin",
+    "Zed",
+    "Shen",
+    "Akali",
+    "Kennen"
+  ];
+
+  const furyChampions = [
+    "Tryndamere",
+    "Renekton",
+    "Shyvana"
+  ];
+
+  if (energyChampions.includes(championName)) {
     return "energy";
+  } else if (furyChampions.includes(championName)) {
+    return "fury";
+  } else {
+    return "mana";
   }
-  return "mana";
 };
 
 export const getResourceColor = (resourceType) => {

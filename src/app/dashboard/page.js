@@ -1,11 +1,12 @@
 "use client";
 import { useEffect, useState } from "react";
-import TeamConfig from "./teamconfig";
-import PlayerConfig from "./playerconfig";
-import ActiveModel from "./activemodel";
-import ImageStore from "./imagestore";
+import TeamConfig from "./teamconfig/teamconfig";
+import PlayerConfig from "./playerconfig/playerconfig";
+import ActiveModel from "./activemodel/activemodel";
+import ImageStore from "./imagestore/imagestore";
 import { connectWebSocket, disconnectWebSocket } from "@/lib/websocket";
 import { parseGameData } from "@/lib/dataParser";
+import LolPatch from "./lolpatch/lolpatch";
 
 export default function Dashboard() {
   const [activeTab, setActiveTab] = useState("team");
@@ -25,6 +26,7 @@ export default function Dashboard() {
       player: <PlayerConfig players={players} />,
       model: <ActiveModel />,
       image: <ImageStore />,
+      lolpatch: <LolPatch />,
     }[activeTab] || <TeamConfig />);
 
   return (
@@ -33,7 +35,7 @@ export default function Dashboard() {
       <div className="bg-white rounded-lg shadow overflow-hidden">
         <nav className="bg-gray-800">
           <ul className="flex">
-            {["team", "player", "model", "image"].map((tab) => (
+            {["team", "player", "model", "image", "lolpatch"].map((tab) => (
               <li key={tab}>
                 <button
                   onClick={() => setActiveTab(tab)}
@@ -43,9 +45,11 @@ export default function Dashboard() {
                       : "hover:bg-gray-700"
                   }`}
                 >
-                  {`${tab.charAt(0).toUpperCase()}${tab.slice(1)} Config`
-                    .replace("model Config", "Active Model")
-                    .replace("image Config", "Image Store")}
+                  {tab === "lolpatch"
+                    ? "League of Legends Patch" 
+                    : `${tab.charAt(0).toUpperCase()}${tab.slice(1)} Config`
+                        .replace("model Config", "Active Model")
+                        .replace("image Config", "Image Store")}
                 </button>
               </li>
             ))}

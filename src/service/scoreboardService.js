@@ -19,6 +19,12 @@ export const calculatePercentage = (current, max) => {
   return (currentValue / maxValue * 100) || 0;
 };
 
+export const calculateXPPercentage = (current, previousLevel, nextLevel) => {
+  if (!current || !previousLevel || !nextLevel) return 0;
+  const progress = (current - previousLevel) / (nextLevel - previousLevel);
+  return Math.min(Math.max(progress * 100, 0), 100);
+};
+
 export const getResourceGradient = (resourceType) => {
   switch (resourceType) {
     case 'mana':
@@ -37,12 +43,18 @@ export const processPlayerStats = (player) => {
   const [currentMana, maxMana] = player.mana.split('/');
   const healthPercentage = calculatePercentage(currentHealth, maxHealth);
   const manaPercentage = calculatePercentage(currentMana, maxMana);
-  const resourceType = getResourceType(player.championInfo.name);
+  const resourceType = getResourceType(player.champion);
+  const xpPercentage = calculateXPPercentage(
+    player.experience.current,
+    player.experience.previousLevel,
+    player.experience.nextLevel
+  );
 
   return {
     healthPercentage,
     manaPercentage,
     resourceType,
-    resourceGradient: getResourceGradient(resourceType)
+    resourceGradient: getResourceGradient(resourceType),
+    xpPercentage
   };
 }; 

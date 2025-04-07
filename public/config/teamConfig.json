@@ -1,12 +1,12 @@
 {
   "blue": {
     "name": "Blue Team",
-    "tag": "BLU",
-    "logo": ""
+    "tag": "HVE",
+    "logo": "/uploads/1744044025863-Hyper_Vortex_Esportslogo_square.webp"
   },
   "red": {
     "name": "Red Team",
-    "tag": "RED",
-    "logo": ""
+    "tag": "TS",
+    "logo": "/uploads/1744002015752-Team_Secret_29logo_square.webp"
   }
 }

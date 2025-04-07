@@ -1,6 +1,6 @@
 'use client';
 import React, { useRef, useState, useEffect } from 'react';
-import { imageApi } from "../api/api";
+import { imageApi } from "../../api/api";
 
 const ImageStore = () => {
   const [images, setImages] = useState([]);

@@ -39,7 +39,7 @@ const PlayerInfo = ({ player, playerData, isBlueTeam, index }) => {
       <div className="flex items-center gap-2">
         <PlayerName 
           name={player.playerName}
-          shutdown={playerData.shutdown}
+          // shutdown={playerData.shutdown}
           isDead={isDead} 
           index={index}
           isBlueTeam={isBlueTeam}
@@ -76,6 +76,7 @@ const PlayerInfo = ({ player, playerData, isBlueTeam, index }) => {
               perk={player.perks[0]}
               level={player.level}
               isDead={isDead}
+              isBlueTeam={true}
             />
           </>
         ) : (
@@ -84,6 +85,7 @@ const PlayerInfo = ({ player, playerData, isBlueTeam, index }) => {
               perk={player.perks[0]}
               level={player.level}
               isDead={isDead}
+              isBlueTeam={false}
             />
             <ResourceBars
               player={player}
@@ -166,42 +168,49 @@ export default function Scoreboardbottom({ playersdata = [], players = [] }) {
   };
 
   return (
-    <div className="mx-auto" style={{ width: "1260px", height: "260px" }}>
-      <div className="w-full h-full bg-black backdrop-blur-sm rounded-t-lg border border-gray-800">
-        <div className="w-full h-full flex justify-between">
-          <div className="w-full h-full bg-black-500/20">
-            <div className="h-full flex flex-col justify-between py-1">
-              {blueTeam.map((player, index) =>
-                renderPlayer(
-                  player,
-                  playersdata.find((p) => p.champion === player.champion),
-                  true,
-                  index
-                )
-              )}
+    <>
+      {/* <div className="w-[160px] mx-auto bg-black text-white text-center text-xl font-bold py-2 rounded-t-lg border border-gray-800">
+        Road To VCS 2025
+      </div> */}
+  
+      <div className="mx-auto" style={{ width: "1260px", height: "260px" }}>
+        <div className="w-full h-full bg-black backdrop-blur-sm rounded-t-lg border border-gray-800">
+          <div className="w-full h-full flex justify-between">
+            <div className="w-full h-full bg-black-500/20">
+              <div className="h-full flex flex-col justify-between py-1">
+                {blueTeam.map((player, index) =>
+                  renderPlayer(
+                    player,
+                    playersdata.find((p) => p.champion === player.champion),
+                    true,
+                    index
+                  )
+                )}
+              </div>
             </div>
-          </div>
-          <div className="w-[70px] h-full bg-block-500/20">
-            <div className="h-full flex flex-col justify-between py-2">
-              {goldDiffs.map((diff, index) => (
-                <GoldDiff key={index} diff={diff.diff} />
-              ))}
+            <div className="w-[70px] h-full bg-black-500/20">
+              <div className="h-full flex flex-col justify-between py-2">
+                {goldDiffs.map((diff, index) => (
+                  <GoldDiff key={index} diff={diff.diff} />
+                ))}
+              </div>
             </div>
-          </div>
-          <div className="w-full h-full bg-black-500/20">
-            <div className="h-full flex flex-col justify-between py-1">
-              {redTeam.map((player, index) =>
-                renderPlayer(
-                  player,
-                  playersdata.find((p) => p.champion === player.champion),
-                  false,
-                  index
-                )
-              )}
+            <div className="w-full h-full bg-black-500/20">
+              <div className="h-full flex flex-col justify-between py-1">
+                {redTeam.map((player, index) =>
+                  renderPlayer(
+                    player,
+                    playersdata.find((p) => p.champion === player.champion),
+                    false,
+                    index
+                  )
+                )}
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
+  
 }
