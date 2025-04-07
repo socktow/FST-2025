@@ -9,12 +9,17 @@ import goldIcon from "../../image/team/icon_gold.png";
 
 export default function Scoreboard({ gameTime = "00:00", scoreboard = [] }) {
   return (
-    <div className="w-full h-full justify-center items-center">
-      <div className="w-[300px] h-[110px] bg-black rounded-lg">
-        {/* Grid container */}
-        <div className="w-full h-full grid grid-cols-4 grid-rows-3 py-1">
+    <div className="w-full h-full flex justify-center items-center">
+      <div className="w-[260px] h-[110px] bg-black rounded-lg">
+        {/* Grid container with custom column widths */}
+        <div
+          className="w-full h-full grid grid-rows-3 py-1"
+          style={{
+            gridTemplateColumns: "120px 40px 40px 60px",
+          }}
+        >
           {/* Row 1 - Headers */}
-          <div className="h-11  bg-black flex items-center justify-center text-white text-sm font-bold">
+          <div className="h-11 bg-black flex items-center justify-center text-white text-sm font-bold">
             {gameTime}
           </div>
           <div className="h-11 flex items-center justify-center">
@@ -41,6 +46,7 @@ export default function Scoreboard({ gameTime = "00:00", scoreboard = [] }) {
               alt="Gold"
               width={15}
               height={15}
+              className="filter brightness-0 invert"
               style={{
                 objectFit: "cover",
                 clipPath: "inset(0 0 50% 0)",
@@ -49,17 +55,16 @@ export default function Scoreboard({ gameTime = "00:00", scoreboard = [] }) {
           </div>
 
           {/* Row 2 - Blue Team */}
-          <Teamname name={scoreboard[0]?.teamTag || "BLUE"} isBlueTeam={true} />
+          <Teamname isBlueTeam={true} />
           <Tower count={scoreboard[0]?.towers || 0} isBlueTeam={true} />
           <Killpoint count={scoreboard[0]?.kills || 0} isBlueTeam={true} />
-
           <Gold
             value={`${(scoreboard[0]?.gold / 1000).toFixed(1)}K`}
             isBlueTeam={true}
           />
 
           {/* Row 3 - Red Team */}
-          <Teamname name={scoreboard[1]?.teamTag || "RED"} isBlueTeam={false} />
+          <Teamname isBlueTeam={false} />
           <Tower count={scoreboard[1]?.towers || 0} isBlueTeam={false} />
           <Killpoint count={scoreboard[1]?.kills || 0} isBlueTeam={false} />
           <Gold

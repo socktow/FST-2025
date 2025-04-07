@@ -5,13 +5,16 @@ import { imageApi } from "../api/api";
 const ImageStore = () => {
   const [images, setImages] = useState([]);
   const [imageName, setImageName] = useState('');
+  const [imageTag, setImageTag] = useState('');
   const [selectedFile, setSelectedFile] = useState(null);
   const [isDragging, setIsDragging] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [isClient, setIsClient] = useState(false);
   const fileInputRef = useRef();
 
   useEffect(() => {
+    setIsClient(true);
     loadImages();
   }, []);
 
@@ -43,10 +46,11 @@ const ImageStore = () => {
     try {
       setIsLoading(true);
       setError(null);
-      const result = await imageApi.upload(selectedFile, imageName);
+      const result = await imageApi.upload(selectedFile, imageName, imageTag);
       if (result) {
-        setImages(prev => [...prev, { name: result.name, url: result.url }]);
+        setImages(prev => [...prev, { name: result.name, tag: result.tag, url: result.url }]);
         setImageName('');
+        setImageTag('');
         setSelectedFile(null);
       } else {
         throw new Error('Upload thất bại');
@@ -105,15 +109,32 @@ const ImageStore = () => {
 
       <div className="bg-white p-6 rounded-lg shadow border mb-6">
         <div className="flex flex-col gap-4">
-          <div className="flex gap-2">
-            <input
-              type="text"
-              placeholder="Nhập tên ảnh *"
-              value={imageName}
-              onChange={(e) => setImageName(e.target.value)}
-              className="flex-1 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              disabled={isLoading}
-            />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">Tên ảnh *</label>
+              <input
+                type="text"
+                placeholder="Nhập tên ảnh"
+                value={imageName}
+                onChange={(e) => setImageName(e.target.value)}
+                className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                disabled={isLoading}
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">Tag</label>
+              <input
+                type="text"
+                placeholder="Nhập tag"
+                value={imageTag}
+                onChange={(e) => setImageTag(e.target.value)}
+                className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                disabled={isLoading}
+              />
+            </div>
+          </div>
+
+          <div className="flex justify-end">
             <button
               className="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
               onClick={handleUpload}
@@ -195,7 +216,14 @@ const ImageStore = () => {
 
       <div className="bg-white p-6 rounded-lg shadow border">
         <h3 className="text-lg font-semibold mb-4">Image Gallery</h3>
-        {isLoading ? (
+        {!isClient ? (
+          <div className="flex justify-center items-center h-40">
+            <svg className="animate-spin h-8 w-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+          </div>
+        ) : isLoading ? (
           <div className="flex justify-center items-center h-40">
             <svg className="animate-spin h-8 w-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
               <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
@@ -215,6 +243,9 @@ const ImageStore = () => {
                 </div>
                 <div className="p-2">
                   <p className="text-sm font-medium">{image.name}</p>
+                  {image.tag && (
+                    <p className="text-xs text-gray-500">Tag: {image.tag}</p>
+                  )}
                 </div>
                 <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
                   <button className="bg-white text-gray-800 px-2 py-1 rounded text-sm mr-2">View</button>

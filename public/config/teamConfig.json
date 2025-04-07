@@ -1,0 +1,12 @@
+{
+  "blue": {
+    "name": "Blue Team",
+    "tag": "BLU",
+    "logo": ""
+  },
+  "red": {
+    "name": "Red Team",
+    "tag": "RED",
+    "logo": ""
+  }
+}

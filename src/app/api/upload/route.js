@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import { writeFile, readFile } from 'fs/promises';
 import path from 'path';
 import fs from 'fs';
+import sharp from 'sharp';
 
 export const config = {
   api: {
@@ -53,6 +54,7 @@ export async function POST(req) {
     const formData = await req.formData();
     const file = formData.get('image');
     const name = formData.get('name') || 'Untitled';
+    const tag = formData.get('tag') || '';
 
     if (!file) {
       return NextResponse.json({ message: 'No file uploaded' }, { status: 400 });
@@ -61,23 +63,30 @@ export async function POST(req) {
     const bytes = await file.arrayBuffer();
     const buffer = Buffer.from(bytes);
 
+    // Convert to WebP
+    const webpBuffer = await sharp(buffer)
+      .webp({ quality: 80 })
+      .toBuffer();
+
     const timestamp = Date.now();
-    const fileName = `${timestamp}-${file.name}`;
+    const baseName = path.parse(file.name).name;
+    const fileName = `${timestamp}-${baseName}.webp`;
     const filePath = path.join(uploadDir, fileName);
 
-    await writeFile(filePath, buffer);
+    await writeFile(filePath, webpBuffer);
 
     const url = `/uploads/${fileName}`;
 
-    // Đọc và cập nhật file JSON
+    // Đọc và cập nhật JSON
     const imageData = await initializeImageData();
     imageData.images.push({
       name: name,
-      url: url
+      tag: tag,
+      url: url,
     });
     await writeFile(imageDataPath, JSON.stringify(imageData, null, 2));
 
-    return NextResponse.json({ fileName, url, name });
+    return NextResponse.json({ fileName, url, name, tag });
   } catch (error) {
     console.error('Upload failed:', error);
     return NextResponse.json({ message: 'Upload failed' }, { status: 500 });

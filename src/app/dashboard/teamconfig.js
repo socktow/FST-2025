@@ -1,140 +1,170 @@
-'use client';
-import { useState, useEffect } from 'react';
-import { imageApi } from '../api/api';
+import { useState, useEffect } from "react";
+import { imageApi, teamConfigApi } from "../api/api";
+import { RefreshCw, Save, Undo2 } from "lucide-react";
 
 export default function TeamConfig() {
   const [teamSettings, setTeamSettings] = useState({
-    blue: { name: 'Blue Team', tag: 'BLU', logo: '' },
-    red: { name: 'Red Team', tag: 'RED', logo: '' },
+    blue: { name: "Blue Team", tag: "BLU", logo: "" },
+    red: { name: "Red Team", tag: "RED", logo: "" },
   });
 
   const [images, setImages] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    loadImages();
+    loadData();
   }, []);
 
-  const loadImages = async () => {
+  const loadData = async () => {
     try {
       setIsLoading(true);
-      const imageList = await imageApi.getAll();
+      setError(null);
+      const [teamConfig, imageList] = await Promise.all([
+        teamConfigApi.getAll(),
+        imageApi.getAll(),
+      ]);
+      setTeamSettings(teamConfig);
       setImages(imageList);
     } catch (error) {
-      console.error('Failed to load images:', error);
+      setError("Failed to load data. Please try again later.");
     } finally {
       setIsLoading(false);
     }
   };
 
   const updateTeam = (team, field, value) => {
-    setTeamSettings(prev => ({
+    setTeamSettings((prev) => ({
       ...prev,
       [team]: { ...prev[team], [field]: value },
     }));
   };
 
-  const saveSettings = () => {
-    alert('Team settings saved!');
-    console.log('Saved:', teamSettings);
+  const saveSettings = async () => {
+    try {
+      setIsLoading(true);
+      await teamConfigApi.update(teamSettings);
+      alert("Team settings saved successfully!");
+    } catch (error) {
+      setError("Failed to save settings. Please try again later.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
-  const filteredImages = images.filter(image => 
-    image.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const resetSettings = async () => {
+    if (window.confirm("Are you sure you want to reset all team settings?")) {
+      try {
+        setIsLoading(true);
+        const defaultConfig = await teamConfigApi.reset();
+        setTeamSettings(defaultConfig);
+        alert("Team settings have been reset to default.");
+      } catch (error) {
+        setError("Failed to reset settings. Please try again later.");
+      } finally {
+        setIsLoading(false);
+      }
+    }
+  };
 
-  const TeamInput = ({ team, color }) => (
-    <div className={`space-y-4 p-4 border border-${color}-200 rounded-lg bg-${color}-50`}>
-      <h4 className={`font-medium text-${color}-700`}>{`${team.charAt(0).toUpperCase() + team.slice(1)} Team`}</h4>
+  const TeamCard = ({ team, color }) => {
+    const t = teamSettings[team];
 
-      {/* Team Name */}
-      <div>
-        <label className="block text-sm font-medium text-gray-700">Team Name</label>
-        <input
-          type="text"
-          value={teamSettings[team].name}
-          onChange={e => updateTeam(team, 'name', e.target.value)}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
-          placeholder="Enter team name"
-        />
-      </div>
+    return (
+      <div className="bg-white shadow-lg rounded-2xl p-6 border flex flex-col gap-4">
+        <h4 className={`text-xl font-semibold text-${color}-600`}>{t.name}</h4>
 
-      {/* Tag Name */}
-      <div>
-        <label className="block text-sm font-medium text-gray-700">Tag Name</label>
-        <input
-          type="text"
-          value={teamSettings[team].tag}
-          onChange={e => updateTeam(team, 'tag', e.target.value)}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
-          placeholder="Enter tag (max 4 chars)"
-          maxLength={4}
-        />
-      </div>
-
-      {/* Logo Select with Search */}
-      <div>
-        <label className="block text-sm font-medium text-gray-700">Team Logo</label>
-        <div className="relative">
-          <input
-            type="text"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            placeholder="Search logo..."
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
-          />
-          <select
-            value={teamSettings[team].logo}
-            onChange={e => updateTeam(team, 'logo', e.target.value)}
-            className="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
-          >
-            <option value="">Select a logo</option>
-            {isLoading ? (
-              <option disabled>Loading logos...</option>
-            ) : filteredImages.length === 0 ? (
-              <option disabled>No logos found</option>
-            ) : (
-              filteredImages.map(image => (
-                <option key={image.url} value={image.url}>
-                  {image.name}
-                </option>
-              ))
-            )}
-          </select>
-        </div>
-
-        {/* Preview */}
-        {teamSettings[team].logo && (
-          <div className="mt-2">
-            <img
-              src={teamSettings[team].logo}
-              alt="Selected logo"
-              className="w-20 h-20 object-contain border rounded"
+        <div className="space-y-2">
+          <div>
+            <label className="text-sm font-medium text-gray-700">Team Name</label>
+            <input
+              type="text"
+              value={t.name}
+              onChange={(e) => updateTeam(team, "name", e.target.value)}
+              className="mt-1 w-full border-gray-300 rounded-md shadow-sm focus:ring focus:ring-indigo-200"
+              placeholder="Enter team name"
+              disabled={isLoading}
             />
           </div>
-        )}
+
+          <div>
+            <label className="text-sm font-medium text-gray-700">Team Tag</label>
+            <input
+              type="text"
+              value={t.tag}
+              onChange={(e) => updateTeam(team, "tag", e.target.value)}
+              maxLength={4}
+              className="mt-1 w-full border-gray-300 rounded-md shadow-sm focus:ring focus:ring-indigo-200"
+              placeholder="Enter tag (max 4 characters)"
+              disabled={isLoading}
+            />
+          </div>
+
+          <div>
+            <label className="text-sm font-medium text-gray-700">Logo</label>
+            <select
+              value={t.logo}
+              onChange={(e) => updateTeam(team, "logo", e.target.value)}
+              className="mt-1 w-full border-gray-300 rounded-md shadow-sm focus:ring focus:ring-indigo-200"
+              disabled={isLoading}
+            >
+              <option value="">Choose a logo...</option>
+              {images.map((img) => (
+                <option key={img.url} value={img.url}>
+                  {img.tag ? `${img.name} - ${img.tag}` : img.name}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          {t.logo && (
+            <div className="flex justify-center">
+              <img
+                src={t.logo}
+                alt="Team logo"
+                className="w-20 h-20 object-contain rounded border mt-2"
+              />
+            </div>
+          )}
+        </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   return (
-    <div className="space-y-6">
-      <h2 className="text-2xl font-bold">Team Configuration</h2>
-      <div className="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200">
-        <h3 className="text-lg font-semibold mb-4">Team Settings</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <TeamInput team="blue" color="blue" />
-          <TeamInput team="red" color="red" />
+    <div className="p-6 max-w-6xl mx-auto space-y-6">
+      <div className="flex items-center justify-between">
+        <h2 className="text-3xl font-bold text-gray-800">⚙️ Team Configuration</h2>
+        <button
+          onClick={resetSettings}
+          disabled={isLoading}
+          className="flex items-center gap-2 px-4 py-2 text-sm bg-red-500 hover:bg-red-600 text-white rounded-md shadow transition"
+        >
+          <Undo2 size={16} />
+          Reset
+        </button>
+      </div>
+
+      {error && (
+        <div className="p-4 bg-red-100 border border-red-300 text-red-700 rounded">
+          {error}
         </div>
-        <div className="mt-6 flex justify-end">
-          <button
-            onClick={saveSettings}
-            className="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
-          >
-            Save Changes
-          </button>
-        </div>
+      )}
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <TeamCard team="blue" color="blue" />
+        <TeamCard team="red" color="red" />
+      </div>
+
+      <div className="flex justify-end">
+        <button
+          onClick={saveSettings}
+          disabled={isLoading}
+          className="flex items-center gap-2 px-6 py-3 text-white bg-indigo-600 hover:bg-indigo-700 rounded-md shadow transition disabled:opacity-50"
+        >
+          <Save size={18} />
+          {isLoading ? "Saving..." : "Save Changes"}
+        </button>
       </div>
     </div>
   );

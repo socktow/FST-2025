@@ -38,45 +38,54 @@ export const playerConfigApi = {
 export const teamConfigApi = {
   getAll: async () => {
     try {
-      const { TeamConfig = [] } = await (await fetch('/api/teamconfig')).json();
-      return TeamConfig;
+      const response = await fetch('/api/teamconfig');
+      if (!response.ok) throw new Error('Failed to fetch team config');
+      return await response.json();
     } catch (error) {
-      console.error('Failed to fetch team config:', error);
-      return [];
+      console.error('Error fetching team config:', error);
+      throw error;
     }
   },
 
   update: async (teamData) => {
     try {
-      const { TeamConfig = [] } = await (await fetch('/api/teamconfig', {
+      const response = await fetch('/api/teamconfig', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ teamData }),
-      })).json();
-      return TeamConfig;
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(teamData),
+      });
+
+      if (!response.ok) throw new Error('Failed to update team config');
+      return await response.json();
     } catch (error) {
-      console.error('Failed to update team config:', error);
-      return [];
+      console.error('Error updating team config:', error);
+      throw error;
     }
   },
 
   reset: async () => {
     try {
-      const { message } = await (await fetch('/api/teamconfig', { method: 'DELETE' })).json();
-      if (message === "All team configurations have been reset.") return { success: true, message };
-      throw new Error("Invalid reset response format");
+      const response = await fetch('/api/teamconfig', {
+        method: 'DELETE',
+      });
+
+      if (!response.ok) throw new Error('Failed to reset team config');
+      return await response.json();
     } catch (error) {
-      console.error('Failed to reset team config:', error);
-      return { success: false, message: error.message || 'Failed to reset team config' };
+      console.error('Error resetting team config:', error);
+      throw error;
     }
   }
 };
 
 export const imageApi = {
-  upload: async (file, name) => {
+  upload: async (file, name, tag) => {
     const formData = new FormData();
     formData.append('image', file);
     formData.append('name', name);
+    formData.append('tag', tag);
 
     try {
       const res = await fetch('/api/upload', {
