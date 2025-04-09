@@ -41,6 +41,8 @@ export function parseGameData(data) {
         grubs: team.grubs || 0,
         dragons: Array.isArray(team.dragons) ? team.dragons : [],
         featsOfStrength: team.featsOfStrength || {},
+        baronPowerPlay: team.baronPowerPlay || {},
+        dragonPowerPlay: team.dragonPowerPlay || {},
       })) || [];
 
     // 📌 Lấy danh sách tên và squareImg của 10 người chơi

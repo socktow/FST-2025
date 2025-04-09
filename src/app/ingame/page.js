@@ -43,8 +43,8 @@ export default function InGame() {
           teamData={teamData}
         />
         <div className="relative top-0 right-0 p-4">
-
-        <UnderScoreboard />
+{/* 
+        <UnderScoreboard /> */}
         </div>
       </div>
       <div className="top-0 right-0 flex flex-col gap-4 p-12">
