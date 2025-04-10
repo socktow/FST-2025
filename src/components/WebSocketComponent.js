@@ -36,16 +36,16 @@ export default function WebSocketComponent() {
 
   return (
     <div className="p-4 text-white bg-gray-800 rounded">
-      <h2 className="text-xl font-bold">Game Info</h2>
-      <p className="mt-2">
+      <h2 className="text-xl font-bold">Dino League of Legends - In Game</h2>
+      {/* <p className="mt-2">
         Status: <span className="text-green-400">{gameStatus}</span>
       </p>
       <p className="mt-2">
         Time: <span className="text-yellow-400">{gameTime}</span>{" "}
-      </p>
+      </p> */}
 
       {/* Hiển thị danh sách người chơi */}
-      <PlayerList players={players} playersdata={playersdata} />
+      {/* <PlayerList players={players} playersdata={playersdata} /> */}
 
       {/* Hiển thị bảng điểm số */}
       {/* <Scoreboard scoreboard={scoreboard} /> */}
