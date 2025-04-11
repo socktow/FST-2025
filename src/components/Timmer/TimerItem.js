@@ -28,7 +28,7 @@ const TimerItem = ({ timer }) => {
             stroke={strokeColor}
             strokeWidth="1"
             fill="transparent"
-            r="3.5"
+            r="3.4"
             cx="4"
             cy="4"
             strokeDasharray="22"
@@ -43,7 +43,7 @@ const TimerItem = ({ timer }) => {
 
   return (
     <div
-      className={`flex items-center gap-2 ${bgColor} px-3 py-2 rounded-full`}
+      className={`flex items-center gap-2 ${bgColor} px-2 py-2 rounded-full`}
     >
       <div className="relative w-8 h-8">
         {renderProgressCircle()}
@@ -52,16 +52,16 @@ const TimerItem = ({ timer }) => {
           <Image
             src={imageUrl}
             alt={timer.subType || "Unknown"}
-            width={20}
-            height={20}
+            width={15}
+            height={15}
             className="object-contain"
-            style={{ filter: "brightness(1.5)" }}
+            style={{ filter: "brightness(2)" }}
           />
         </div>
       </div>
 
       {totalSeconds <= 0 ? null : (
-        <div className="text-sm font-bold text-white">{timer.timeLeft}</div>
+        <div className="text-lg font-bold text-white">{timer.timeLeft}</div>
       )}
     </div>
   );

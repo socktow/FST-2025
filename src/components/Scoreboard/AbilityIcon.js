@@ -29,7 +29,7 @@ export default function AbilityIcon({ ability, isDead}) {
       />
       {ability.cooldown > 0 && (
         <div className="absolute inset-0 rounded-full">
-          <div className="absolute inset-0 bg-black/60 rounded-full"></div>
+          <div className="absolute inset-0 bg-black/70 rounded-full"></div>
           <div 
             className="absolute inset-0 rounded-full" 
             style={{

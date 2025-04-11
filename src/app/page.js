@@ -1,6 +1,4 @@
 import Link from 'next/link';
-import WebSocketComponent from "../components/WebSocketComponent";
-
 export default function Home() {
   return (
     <div className="min-h-screen bg-cover bg-center relative" style={{ backgroundImage: `url('https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt5656c1d77b420239/65545239a5f70b771337422f/LOL_Splash_Banner_1920x1080_01.jpg')` }}>
@@ -19,6 +17,7 @@ export default function Home() {
               Dashboard
             </Link>
           </div>
+          
       </div>
     </div>
   );

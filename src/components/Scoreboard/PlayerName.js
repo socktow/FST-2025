@@ -13,11 +13,9 @@ export default function PlayerName({ name, isDead, index, isBlueTeam , shutdown 
     playerLogs.add(name);
     if (isFirstRender.current) {
       isFirstRender.current = false;
-      setTimeout(() => {
-        console.log({ player: Array.from(playerLogs) });
-      }, 0);
     }
   }, [name]);
+  
   const fetchCustomNames = async () => {
     try {
       setIsLoading(true);

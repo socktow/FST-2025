@@ -2,37 +2,37 @@
 import { useEffect, useState } from "react";
 import { connectWebSocket, disconnectWebSocket } from "@/lib/websocket";
 import { parseGameData } from "@/lib/dataParser";
-import PlayerList from "@/components/PlayerList";
-import TimerDisplay from "@/components/TimerDisplay";
-import Scoreboard from "@/components/Scoreboard";
+// import PlayerList from "@/components/PlayerList";
+// import TimerDisplay from "@/components/TimerDisplay";
+// import Scoreboard from "@/components/Scoreboard";
 
 export default function WebSocketComponent() {
-  const [gameStatus, setGameStatus] = useState("Waiting...");
-  const [gameTime, setGameTime] = useState(0);
-  const [baronTimer, setBaronTimer] = useState(null);
-  const [dragonTimer, setDragonTimer] = useState(null);
-  const [atakhanTimer, setAtakhanTimer] = useState(null);
-  const [scoreboard, setScoreboard] = useState([]);
-  const [players, setPlayers] = useState([]);
-  const [playersdata, setPlayersdata] = useState([]);
+  // const [gameStatus, setGameStatus] = useState("Waiting...");
+  // const [gameTime, setGameTime] = useState(0);
+  // const [baronTimer, setBaronTimer] = useState(null);
+  // const [dragonTimer, setDragonTimer] = useState(null);
+  // const [atakhanTimer, setAtakhanTimer] = useState(null);
+  // const [scoreboard, setScoreboard] = useState([]);
+  // const [players, setPlayers] = useState([]);
+  // const [playersdata, setPlayersdata] = useState([]);
   
-  useEffect(() => {
-    connectWebSocket((rawData) => {
-      const parsedData = parseGameData(rawData);
-      if (parsedData) {
-        setGameStatus(parsedData.gameStatus);
-        setGameTime(parsedData.gameTime);
-        setBaronTimer(parsedData.baronTimer);
-        setDragonTimer(parsedData.dragonTimer);
-        setAtakhanTimer(parsedData.atakhanTimer);
-        setScoreboard(parsedData.scoreboard);
-        setPlayers(parsedData.players);
-        setPlayersdata(parsedData.playersdata);
-      }
-    });
+  // useEffect(() => {
+  //   connectWebSocket((rawData) => {
+  //     const parsedData = parseGameData(rawData);
+  //     if (parsedData) {
+  //       setGameStatus(parsedData.gameStatus);
+  //       setGameTime(parsedData.gameTime);
+  //       setBaronTimer(parsedData.baronTimer);
+  //       setDragonTimer(parsedData.dragonTimer);
+  //       setAtakhanTimer(parsedData.atakhanTimer);
+  //       setScoreboard(parsedData.scoreboard);
+  //       setPlayers(parsedData.players);
+  //       setPlayersdata(parsedData.playersdata);
+  //     }
+  //   });
 
-    return () => disconnectWebSocket();
-  }, []);
+  //   return () => disconnectWebSocket();
+  // }, []);
 
   return (
     <div className="p-4 text-white bg-gray-800 rounded">
