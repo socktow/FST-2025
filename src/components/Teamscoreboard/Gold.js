@@ -25,7 +25,7 @@ export default function Gold({ value = "0", isBlueTeam = false, fullScoreboard =
   return (
     <div
       className={`flex items-center justify-center gap-1 text-white font-bold 
-        border-b-4 m-1 h-8`}
+        border-b-2 m-1 h-8`}
       style={{
         borderColor: isLeading ? highlightColor : baseColor,
       }}

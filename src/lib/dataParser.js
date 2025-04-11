@@ -14,6 +14,7 @@ export function parseGameData(data) {
       ? {
           subType: data.state.baronPitTimer.subType || "Unknown",
           timeLeft: convertTime(data.state.baronPitTimer.timeLeft),
+          timeTotal: convertTime(data.state.baronPitTimer.timeTotal),
         }
       : null;
 
@@ -22,6 +23,7 @@ export function parseGameData(data) {
       ? {
           subType: data.state.dragonPitTimer.subType || "Unknown",
           timeLeft: convertTime(data.state.dragonPitTimer.timeLeft),
+          timeTotal: convertTime(data.state.dragonPitTimer.timeTotal),
         }
       : null;
 
@@ -29,6 +31,7 @@ export function parseGameData(data) {
       ? {
           subType: data.state.atakhanTimer.subType || "Unknown",
           timeLeft: convertTime(data.state.atakhanTimer.timeLeft),
+          timeTotal: convertTime(data.state.atakhanTimer.timeTotal),
         }
       : null;
 

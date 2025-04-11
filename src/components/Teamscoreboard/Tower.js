@@ -15,7 +15,7 @@ export default function Tower({ count = 0, isBlueTeam = false, fullScoreboard = 
 
   return (
     <div
-      className={`flex items-center justify-center gap-2 text-white font-bold border-b-4 m-1 h-8`}
+      className={`flex items-center justify-center gap-2 text-white font-bold border-b-2 m-1 h-8`}
       style={{
         borderColor: isLeading ? highlightColor : baseColor,
       }}

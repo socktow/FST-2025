@@ -4,8 +4,8 @@ import { connectWebSocket, disconnectWebSocket } from "@/lib/websocket";
 import { parseGameData } from "@/lib/dataParser";
 import Scoreboard from "./Scoreboard";
 import Scoreboardbottom from "./Scoreboardbottom";
-import UnderScoreboard from "./UnderScoreboard";
 import Timer from "./Timer";
+import UnderScoreboard from "./UnderScoreboard";
 import KillFeed from "./KillFeed";
 export default function InGame() {
   const [scoreboard, setScoreboard] = useState([]);
