@@ -5,7 +5,6 @@ import { parseGameData } from "@/lib/dataParser";
 import Scoreboard from "./Scoreboard";
 import Scoreboardbottom from "./Scoreboardbottom";
 import Timer from "./Timer";
-import PowerPlay from "./PowerPlay";
 export default function InGame() {
   const [scoreboard, setScoreboard] = useState([]);
   const [gameTime, setGameTime] = useState(0);
@@ -41,9 +40,6 @@ export default function InGame() {
           gameTime={gameTime}
           teamData={teamData}
         />
-        <div className="relative">
-          <PowerPlay scoreboard={scoreboard} />
-        </div>
       </div>
       <div className="top-0 right-0 flex flex-col gap-4 p-12">
         <Timer
