@@ -5,8 +5,7 @@ import { parseGameData } from "@/lib/dataParser";
 import Scoreboard from "./Scoreboard";
 import Scoreboardbottom from "./Scoreboardbottom";
 import Timer from "./Timer";
-import UnderScoreboard from "./UnderScoreboard";
-import KillFeed from "./KillFeed";
+import PowerPlay from "./PowerPlay";
 export default function InGame() {
   const [scoreboard, setScoreboard] = useState([]);
   const [gameTime, setGameTime] = useState(0);
@@ -36,25 +35,24 @@ export default function InGame() {
 
   return (
     <div className="min-h-screen relative">
-      <div className="absolute top-0 left-0 p-4">
-        <Scoreboard 
-          scoreboard={scoreboard} 
-          gameTime={gameTime} 
+      <div className="absolute flex top-0 left-0 p-4">
+        <Scoreboard
+          scoreboard={scoreboard}
+          gameTime={gameTime}
           teamData={teamData}
         />
-        <div className="relative top-0 right-0 p-4">
-{/* 
-        <UnderScoreboard /> */}
+        <div className="relative">
+          <PowerPlay scoreboard={scoreboard} />
         </div>
       </div>
       <div className="top-0 right-0 flex flex-col gap-4 p-12">
-      <Timer
-        gameTime={gameTime}  
-        baronTimer={baronTimer}
-        dragonTimer={dragonTimer}
-        atakhanTimer={atakhanTimer}
-      />
-      {/* <KillFeed /> */}
+        <Timer
+          gameTime={gameTime}
+          baronTimer={baronTimer}
+          dragonTimer={dragonTimer}
+          atakhanTimer={atakhanTimer}
+          scoreboard={scoreboard}
+        />
       </div>
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full">
         <Scoreboardbottom playersdata={playersdata} players={players} />

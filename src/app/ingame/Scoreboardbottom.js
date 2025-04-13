@@ -39,7 +39,6 @@ const PlayerInfo = ({ player, playerData, isBlueTeam, index }) => {
       <div className="flex items-center gap-2">
         <PlayerName 
           name={player.playerName}
-          // shutdown={playerData.shutdown}
           isDead={isDead} 
           index={index}
           isBlueTeam={isBlueTeam}
