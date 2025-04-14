@@ -27,7 +27,8 @@ export const getResourceType = (championName) => {
     "Zed",
     "Shen",
     "Akali",
-    "Kennen"
+    "Kennen",
+    "Rumble"
   ];
 
   const furyChampions = [
