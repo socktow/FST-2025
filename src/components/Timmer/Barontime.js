@@ -1,7 +1,6 @@
 import { useMemo } from "react";
 import Image from "next/image";
 import { getLightColor, calculateProgress } from "./utils";
-import BaronPowerPlay from "./BaronPowerPlay";
 
 const Barontime = ({ timer }) => {
   const progress = calculateProgress(timer);

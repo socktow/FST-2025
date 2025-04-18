@@ -18,18 +18,24 @@ const BaronPowerPlay = ({ scoreboard }) => {
   if (!hasBluePowerPlay && !hasRedPowerPlay) return null;
 
   return (
-    <div className="relative w-[140px] ">
+    <div className="relative w-[140px]">
       <div className="absolute flex items-center gap-2 bg-gradient-to-r from-gray-700 to-gray-800 px-2 py-2 rounded-full relative z-10">
         {hasBluePowerPlay && (
           <div className="flex items-center gap-1">
             <span className="text-blue-500 font-bold">BLU</span>
-            <span className="text-white text-2xl font-semibold">{formatTime(blueTeam.baronPowerPlay.timeLeft)}</span>
+            <div className="flex flex-col items-center">
+              <span className="text-white text-2xl font-semibold">{formatTime(blueTeam.baronPowerPlay.timeLeft)}</span>
+              <span className="text-white text-sm font-semibold">1500</span>
+            </div>
           </div>
         )}
         {hasRedPowerPlay && (
           <div className="flex items-center gap-1">
             <span className="text-red-500 font-bold">RED</span>
-            <span className="text-white text-2xl font-bold">{formatTime(redTeam.baronPowerPlay.timeLeft)}</span>
+            <div className="flex flex-col items-center">
+              <span className="text-white text-2xl font-semibold">{formatTime(redTeam.baronPowerPlay.timeLeft)}</span>
+              <span className="text-white text-sm font-semibold">1500</span>
+            </div>
           </div>
         )}
       </div>
